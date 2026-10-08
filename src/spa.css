@@ -1,0 +1,16 @@
+/* страницы */
+nav a[aria-current="page"]{color:var(--red);box-shadow:0 2px 0 var(--red)}
+.toc{list-style:none;margin:34px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 40px}
+.toc a{display:grid;grid-template-columns:3.2rem minmax(0,1fr);gap:14px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink)}
+.toc .cn{font:400 2.4rem/.9 var(--title);justify-self:center}
+.toc b{font:400 1.35rem/1.2 var(--display);display:block}
+.toc i{color:var(--muted);font-size:.95rem}
+.toc a:hover b{color:var(--red)}
+#tocbox{padding-bottom:50px}
+.pager{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-top:48px;border-top:1px solid var(--ink);padding-top:16px}
+.pager a{font:400 1.15rem var(--display);text-decoration:none;color:var(--ink);max-width:46%}
+.pager a small{display:block;color:var(--red);font-size:.9rem}
+.pager a:hover{color:var(--red)}
+.pager a.nx{text-align:right;margin-left:auto}
+h2:focus{outline:none}
+@media (max-width:560px){.toc{grid-template-columns:1fr}}
