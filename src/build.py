@@ -75,13 +75,13 @@ rep("[[60.85,31.55,'Ладожское озеро']","""{const df=el('defs',{},m
 {const cx=398,cy=694,g=el('g',{},map);for(let i=0;i<8;i++){const a=i*Math.PI/4,r=i%2?13:26,w=5,x=cx+Math.sin(a)*r,y=cy-Math.cos(a)*r;
   el('polygon',{points:`${x},${y} ${cx+Math.sin(a+1.57)*w},${cy-Math.cos(a+1.57)*w} ${cx},${cy} `,fill:i===0?'var(--red)':'var(--ink)'},g);
   el('polygon',{points:`${x},${y} ${cx+Math.sin(a-1.57)*w},${cy-Math.cos(a-1.57)*w} ${cx},${cy}`,fill:'var(--surface)',stroke:i===0?'var(--red)':'var(--ink)','stroke-width':.8},g)}
- [['сивер',0,-33,'middle'],['летник',0,41,'middle'],['всток',31,4,'start'],['запад',-31,4,'end']].forEach(([t,dx,dy,an])=>{const e=el('text',{x:cx+dx,y:cy+dy,'text-anchor':an,class:'maplabel'},g);e.textContent=t})}
+ [['сивер',0,-33,'middle'],['Юг · летник',0,41,'middle'],['всток',31,4,'start'],['запад',-31,4,'end']].forEach(([t,dx,dy,an])=>{const e=el('text',{x:cx+dx,y:cy+dy,'text-anchor':an,class:'maplabel'},g);e.textContent=t})}
 [[60.85,31.55,'Ладожское озеро']""")
 rep("if(t==='Карелия'){e.style.fontSize='15px';e.style.letterSpacing='.2em'}","if(t==='Карелия'){e.style.fontFamily='var(--title)';e.style.fontSize='22px';e.style.fill='var(--red)';e.style.opacity=.75}")
 rep("stroke:'var(--muted)','stroke-width':1,'stroke-linejoin':'round'","stroke:'var(--ink)','stroke-width':1.2,'stroke-linejoin':'round'")
 rep("el('rect',{x:0,y:0,width:480,height:750,fill:'var(--land-out)'},map);","el('rect',{x:0,y:0,width:480,height:750,fill:'var(--surface)'},map);")
 rep("fill:'var(--land-out)',points:poly([[66.9,33.2]","fill:'var(--surface)',points:poly([[66.9,33.2]")
-rep("Очертания упрощены, точки стоят по географическим координатам; три соседние остановки у Кондопоги слегка раздвинуты.","Очертания упрощены, точки стоят по географическим координатам; три соседние остановки у Кондопоги слегка раздвинуты. Стороны света подписаны по-поморски: сивер, летник, всток, запад.")
+rep("Очертания упрощены, точки стоят по географическим координатам; три соседние остановки у Кондопоги слегка раздвинуты.","Очертания упрощены, точки стоят по географическим координатам; три соседние остановки у Кондопоги слегка раздвинуты. Подписи используют северные названия: сивер — север, всток — восток. Летник — южный ветер; на схеме это слово сопровождает обозначение юга.")
 rep("const MAT={","const CN=['а','в','г','д','є','ѕ','з','и','ѳ','і','аі','ві'];\nconst MAT={")
 rep("""<div class="top"><span class="tag">${m.n}</span><span class="num" style="color:var(--muted);font-size:.8rem">остановка ${i+1} из ${STOPS.length} · ${s.date}</span></div>""","""<div class="top"><span class="cn" title="${i+1} кириллическим счётом">${CN[i]}</span><span class="tag">${m.n}</span><span>остановка ${i+1} из ${STOPS.length} · ${s.date}</span></div>""")
 rep("""<div style="font-size:.88rem"><a href""","""<div style="font-size:.95rem"><a href""")

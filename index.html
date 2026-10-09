@@ -492,7 +492,7 @@ img.lb{cursor:zoom-in}
   <div class="route">
     <div class="mapbox">
       <svg id="map" viewBox="0 0 480 750" role="group" aria-label="Схема Карелии с остановками маршрута"></svg>
-      <figcaption>Схема. Очертания упрощены, точки стоят по географическим координатам; три соседние остановки у Кондопоги слегка раздвинуты. Стороны света подписаны по-поморски: сивер, летник, всток, запад.</figcaption>
+      <figcaption>Схема. Очертания упрощены, точки стоят по географическим координатам; три соседние остановки у Кондопоги слегка раздвинуты. Подписи используют северные названия: сивер — север, всток — восток. Летник — южный ветер; на схеме это слово сопровождает обозначение юга.</figcaption>
     </div>
     <div>
       <article class="card" id="card" aria-live="polite"></article>
@@ -977,7 +977,7 @@ el('polygon',{fill:'var(--lake)',points:poly([[62.92,34.45],[62.86,34.9],[62.4,3
 {const cx=398,cy=694,g=el('g',{},map);for(let i=0;i<8;i++){const a=i*Math.PI/4,r=i%2?13:26,w=5,x=cx+Math.sin(a)*r,y=cy-Math.cos(a)*r;
   el('polygon',{points:`${x},${y} ${cx+Math.sin(a+1.57)*w},${cy-Math.cos(a+1.57)*w} ${cx},${cy} `,fill:i===0?'var(--red)':'var(--ink)'},g);
   el('polygon',{points:`${x},${y} ${cx+Math.sin(a-1.57)*w},${cy-Math.cos(a-1.57)*w} ${cx},${cy}`,fill:'var(--surface)',stroke:i===0?'var(--red)':'var(--ink)','stroke-width':.8},g)}
- [['сивер',0,-33,'middle'],['летник',0,41,'middle'],['всток',31,4,'start'],['запад',-31,4,'end']].forEach(([t,dx,dy,an])=>{const e=el('text',{x:cx+dx,y:cy+dy,'text-anchor':an,class:'maplabel'},g);e.textContent=t})}
+ [['сивер',0,-33,'middle'],['Юг · летник',0,41,'middle'],['всток',31,4,'start'],['запад',-31,4,'end']].forEach(([t,dx,dy,an])=>{const e=el('text',{x:cx+dx,y:cy+dy,'text-anchor':an,class:'maplabel'},g);e.textContent=t})}
 [[60.85,31.55,'Ладожское озеро'],[61.45,35.75,'Онежское оз.'],[65.3,36.7,'Белое море'],[63.4,29.25,'Финляндия'],[64.2,32.3,'Карелия'],[66.62,35.9,'Кольский п-ов']].forEach(([la,lo,t])=>{const[x,y]=P(la,lo);const e=el('text',{x,y,'text-anchor':'middle',class:'maplabel'},map);e.textContent=t;if(t==='Финляндия')e.setAttribute('transform',`rotate(-78 ${x} ${y})`);if(t==='Карелия'){e.style.fontFamily='var(--title)';e.style.fontSize='22px';e.style.fill='var(--red)';e.style.opacity=.75}});
 {const[x,y]=P(65.05,35.7);el('circle',{cx:x,cy:y,r:3,fill:'var(--muted)'},map);const e=el('text',{x:x+7,y:y+4,class:'maplabel'},map);e.textContent='Соловки'}
 STOPS.forEach(s=>{const[x,y]=P(s.lat,s.lon);s.x=x+(s.dx||0);s.y=y+(s.dy||0)});
