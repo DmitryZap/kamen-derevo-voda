@@ -67,6 +67,7 @@ section>.band{margin-bottom:38px}
 .sec-head h2{grid-column:2}
 .sec-head p{grid-column:1/-1;margin-top:14px}
 .prose{display:flex;flex-direction:column;gap:14px}
+p.prose{display:block}
 .bukv>p:first-of-type::first-letter{font:400 3.7em/.72 var(--title);color:var(--red);float:left;padding:.06em .08em 0 0}
 .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px;align-items:start}
 .two>*{min-width:0}

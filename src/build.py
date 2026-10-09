@@ -48,8 +48,8 @@ rep('<p>Русские былины','<p class="zri"><b>Зри:</b>у песни
 # подвал
 a=s.index('<footer>');b=s.index('</footer>')
 s=s[:a]+'''<footer><div class="band" data-s="5"></div>
-<p class="colophon">Писано в лето 7535 от сотворения мира, октября в 8 день. А где описались, не клените, но исправляйте.</p>
-<small>Учебный проект «Создание интерактивного путеводителя по региону». Формула в конце взята у древнерусских писцов: так они заканчивали книги. Статистика дана с годом, к которому относится; исторические сведения приведены по энциклопедическим источникам.</small>'''+s[b:]
+<p class="colophon">Писано в лето 7535 от сотворения мира, октября в 3 день. А где описались, не клените, но исправляйте.</p>
+<small>Учебный проект «Создание интерактивного путеводителя по региону». Статистика дана с годом, к которому относится; исторические сведения приведены по энциклопедическим источникам.</small>'''+s[b:]
 # JS
 a=s.index('/* ---------- силуэт храма ---------- */');b=s.index('/* ---------- люди ---------- */')
 emb='''/* ---------- вышивка: узоры строятся по клеткам, как счётный шов ---------- */
@@ -81,7 +81,6 @@ rep("if(t==='Карелия'){e.style.fontSize='15px';e.style.letterSpacing='.2e
 rep("stroke:'var(--muted)','stroke-width':1,'stroke-linejoin':'round'","stroke:'var(--ink)','stroke-width':1.2,'stroke-linejoin':'round'")
 rep("el('rect',{x:0,y:0,width:480,height:750,fill:'var(--land-out)'},map);","el('rect',{x:0,y:0,width:480,height:750,fill:'var(--surface)'},map);")
 rep("fill:'var(--land-out)',points:poly([[66.9,33.2]","fill:'var(--surface)',points:poly([[66.9,33.2]")
-rep("Очертания упрощены, точки стоят по географическим координатам; три соседние остановки у Кондопоги слегка раздвинуты.","Очертания упрощены, точки стоят по географическим координатам; три соседние остановки у Кондопоги слегка раздвинуты. Подписи используют северные названия: сивер — север, всток — восток. Летник — южный ветер; на схеме это слово сопровождает обозначение юга.")
 rep("const MAT={","const CN=['а','в','г','д','є','ѕ','з','и','ѳ','і','аі','ві'];\nconst MAT={")
 rep("""<div class="top"><span class="tag">${m.n}</span><span class="num" style="color:var(--muted);font-size:.8rem">остановка ${i+1} из ${STOPS.length} · ${s.date}</span></div>""","""<div class="top"><span class="cn" title="${i+1} кириллическим счётом">${CN[i]}</span><span class="tag">${m.n}</span><span>остановка ${i+1} из ${STOPS.length} · ${s.date}</span></div>""")
 rep("""<div style="font-size:.88rem"><a href""","""<div style="font-size:.95rem"><a href""")
@@ -127,5 +126,7 @@ rep('<div class="facts">','<div class="slides" id="slides" aria-label="Сним�
 k=s.rindex('</script>');s=s[:k]+open('live.js',encoding='utf8').read()+s[k:]
 s=s.replace('</style>',open('glossary.css',encoding='utf8').read()+'</style>',1)
 k=s.rindex('</script>');s=s[:k]+open('glossary.js',encoding='utf8').read()+s[k:]
-SKEL='<!doctype html>\n<html lang="ru">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n<meta name="description" content="Интерактивный путеводитель по Карелии: камень, дерево, вода. Маршрут из 12 остановок от Ладоги до Белого моря.">\n<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>\n'
+# favicon: три полосы в цветах камня, дерева и воды, как в заголовке
+ICON='data:image/svg+xml,'+"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='#ebe6d9'/><rect x='12' y='12' width='40' height='10' fill='#84479c'/><rect x='12' y='27' width='40' height='10' fill='#b8741a'/><rect x='12' y='42' width='40' height='10' fill='#2a78b8'/></svg>".replace('<','%3C').replace('>','%3E').replace('#','%23')
+SKEL='<!doctype html>\n<html lang="ru">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n<meta name="description" content="Интерактивный путеводитель по Карелии: камень, дерево, вода. Маршрут из 12 остановок от Ладоги до Белого моря.">\n<link rel="icon" type="image/svg+xml" href="'+ICON+'">\n<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>\n'
 open('../index.html','w',encoding='utf8').write(SKEL+s.replace('<nav ','</head>\n<body>\n<nav ',1)+'\n</body>\n</html>\n');print('index.html',len(s)//1024,'KB')

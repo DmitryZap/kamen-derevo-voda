@@ -38,7 +38,7 @@ function tiles(host,items,cls){const ids=items.map(x=>x[0]),tx={};items.forEach(
 
 /* ---- титул: сказитель и снимки в оглавлении ---- */
 (function(){const pool=[];STOPS.forEach((s,i)=>{if(i!==9)s.facts.forEach(f=>pool.push([f,s.name,i]))});let k=Math.floor(Math.random()*pool.length);
-  const t=H('div','teller','<div class="emb2"></div><p></p><button class="btn ghost" id="tellMore">Ещё подробность</button>');t.querySelector('.emb2').appendChild(smallEmb('wood'));
+  const t=H('div','teller','<div class="emb2"></div><p></p><button class="btn ghost" id="tellMore">Ещё факт</button>');t.querySelector('.emb2').appendChild(smallEmb('wood'));
   $('#tocbox').insertBefore(t,$('#toc'));
   const draw=()=>{const f=pool[k];t.querySelector('p').innerHTML=`${f[0]}.<small>Из рассказа об остановке «<a href="#route" data-stop="${f[2]}">${f[1]}</a>»</small>`};
   t.querySelector('#tellMore').onclick=()=>{k=(k+1+Math.floor(Math.random()*(pool.length-1)))%pool.length;draw()};
