@@ -125,5 +125,7 @@ k=s.index('<script>')+8;s=s[:k]+open('head.js',encoding='utf8').read().replace('
 rep('${ph}','${galleryHTML(i)}')
 rep('<div class="facts">','<div class="slides" id="slides" aria-label="Снимки Карелии"></div>\n  <div class="facts">')
 k=s.rindex('</script>');s=s[:k]+open('live.js',encoding='utf8').read()+s[k:]
+s=s.replace('</style>',open('glossary.css',encoding='utf8').read()+'</style>',1)
+k=s.rindex('</script>');s=s[:k]+open('glossary.js',encoding='utf8').read()+s[k:]
 SKEL='<!doctype html>\n<html lang="ru">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n<meta name="description" content="Интерактивный путеводитель по Карелии: камень, дерево, вода. Маршрут из 12 остановок от Ладоги до Белого моря.">\n<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>\n'
 open('../index.html','w',encoding='utf8').write(SKEL+s.replace('<nav ','</head>\n<body>\n<nav ',1)+'\n</body>\n</html>\n');print('index.html',len(s)//1024,'KB')

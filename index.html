@@ -330,6 +330,11 @@ img.lb{cursor:zoom-in}
 .field-task summary{cursor:pointer;color:var(--red);font-family:var(--display)}
 .field-task p,.field-task ul{margin:12px 0 0}
 .field-task li{margin-bottom:8px}
+/* Словарные пояснения сохраняют шрифт и цвет окружающего текста. */
+.glossary-word{cursor:help;text-decoration-line:underline;text-decoration-style:dotted;text-decoration-thickness:1px;text-underline-offset:.22em}
+.glossary-word:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:2px}
+#map .glossary-word{pointer-events:auto}
+.word-tip{position:fixed;z-index:10000;box-sizing:border-box;width:max-content;max-width:min(310px,calc(100vw - 24px));padding:12px 15px;border:1px solid var(--muted);border-radius:3px;background:var(--surface);color:var(--ink);box-shadow:0 5px 22px #0003;font:16px/1.5 var(--body,'PT Serif',serif);letter-spacing:normal;text-transform:none}
 </style>
 <style>
 @font-face{font-family:"Ruslan Display";font-style:normal;font-weight:400;font-display:swap;src:url(data:font/woff2;base64,d09GMgABAAAAABIkAA0AAAAAPwAAABHPAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAABmAAfBEICs1AwgsLhwoAATYCJAOOEBOFLAQgBYQAB40yDAcb3TQV45gVsHEAEIUviCggpfj/Y4IcI8Zmf4DYW4sgiVR0VJRiUACD1N4dM5lUMGmO8ODTLnHN8hdbgPKSCxd7ZctU/cy1zTKelZaj/7Zv3Ova1xPH3u0yfcdIfbDhcVv/thEDJEe0oCJoY8URJYKJh1UYhZiX7UX2v67+HuZK5e9ofQSwd0kBSBoVOFACP0tW7id/ww4CjEbt41Wi+Hs2t7dRngeCKSSxRkH/jeq9TT9h7CBmf+3X4brNqV16OgLM/wCAAuxdPEXNuXiakA/ARhRt23nhEMuZUFk2lzMMEbua20rdlgeuTQQnFvkg/NqGvFyTj4Cp/X7Vt4hoqDQISTx18jPcHvYlYWbVpJtYVI2iITKUQKRRzUIkwV1IxHK5XgxX28H/+8um/745csulxJcqkRpjJh/1ckP83wSFmoyi+dasWnAKIT1CKoRVXCsnC+gmHeuGW4o36FDteeWdcQAYds8keADgvXEAGPfVBXRPhN8ADAxMAEQXxaXxvFrbwEEA5A9445UA8MEZD4CZAADQ1/kKAJmrC0A02JtaEHLjQK0FF4MGBA0qf+hFLeAyWtTSTn7yboBVfISj4bJa0kmXBNL9w7Nz5Z/sdjnBh28AAWMBAchPky65oaOMkdFp6lOmSnbGDySh8ETDeEQABGAALXAiLrwZmhX+bmjv0FZdJEKMRol0gtjqFunrFIdDECWJFIJigaEoCUUxPkFE9JGjNLmYRSBwCF5ETIKqkiK4DK4ck/GoKEYlSDhyIZEoF7Ml/gwChUCiEALFKJvgpbhWLTkaqYNvOYuHeqEUPBXnvJGL7iWG4xud1SpwDG5sQ9PR7H6rprECz5lSarsylUcWwHWROv/xlCsebr360ga9vdm/NKeKFKPtfPhaiGzLqeKGVANHtpMU95hSUteKKyJ7Dkh5/4NeeefELARtwU2RUA8HmvGL+QJ0Y14Hs1GfIQJgjmyQmaaxKypvPeYDa2L/bZmqxjeUwV5vmm2/QOoau9nDRmYA213Zp3ftGujxd8AwGSS2TJB/I5YoCBa/Sbc6nsPYf331pQ1DrnjYLDS1TX+tmGR3hrbcqArhrtMvsK13UhxBIZhg1rdKUl6TKrBJXx1OJcvSKhImrG69TLHdbhTCz7NoG+p0aD31S9brNdindxVXZkQTtS5q/4nMeulJcMUDMHk9MM+ntBnYmphUCGY75mvufziZPZPt6TvhXq/Jg/zqiOvZQ6T+VVdUMMAYU6rzsDkcHr38xvbQeyDZWJOAa9qWup71nYxRN0XMntgcWfxFwKaOBwrWWRPC5L6R2H/JSCosyGYYCa0ppbEt1LW+0ak1xx16gipdluth1L244ZsyDviThYITafW1IuPWaTs5k4Z2dov512m9159hmo3UdlVKZOzkbrryIqzBlN0nNZee3zrJoNt3hmpmELKmmaV7dlTtAPd69qB6Kp4gUbOLw3jjm4ZtrmttPb98CIPMRFpF73qvO6a3FbaDi1dczf5JmU0floV0typVwWwqKNovNoZUAYwBMOFPuVGrZ9BSYCRhvJB96GnzxDYo4j8NiHNit9eG0CGZIVSLkdaKm69parzR8GD06gUC98mF1L922XKiXUiR7YBvLDEriwtaz9CUFs7CXH8i++iZY7hBNHGatXrIoA0FQf4N9WqSkoZb6E+skdzi9bK1IvZCGylSECLGdQv2UNvRl/grcX2G0SdbXM8d5U+Z2EJdlfIfH3xuxeXdg+dnwhmUFo4VDURRR2X4Rnc1p3uHGtkFm/oYTfJ8Om6Be5FRLvkjVWV+YJX21Qjxlk+IODiTZE9HzjShibtba/F4u0ieM3I/9Fj3lytHOHYodPWJyW4O5xaPual+Q6uDdjiFnw6dvevxEKgaXCbrWCqty7pDCQlkvKhq/19IQ/ykYlgFrRtINfMPcwGpky/xmWuicQx9gztXs6/maOZNrPERBtPlsHLljpVVSzHxzl7toL9yZBmElOL9fFoovQ75d1DTJ34dj8Bj50NVJ99k5upLNAau68oaAa2Z9MisGH3aBsF2XJqIvdeRxY98ZgQ7ZS6d04bTZxvsTwWzMvXduWUfWHuw/aA6L/qdT+Gb12GgK7AQTy0LySVhBjZN5dLRTivuhnaEXlRzjzWI7uUiMaovTnnYyQ6zkLCrbCc5w5XI9rCzuqxGsG1ewGAsq39uFOMG+HofJknzcxLqlOlMgyA87UY/fsEAf9WKCKyWoL8tX7jNW+LgsgoycHLfdbNY9YKU7C8ahv9XJcWItxSSRymAeqWbenv4llZvCT14KTxFhFefXRjMvoWNpFDLeYzyZ7KhneDsx3w0bIk01RmRF28rjoH03+whXapMXr5/9cwcz875G4o8fKY5c4sJmlulMOym6+1+I24FOmFscHgeWLGjo3D5emu8J84c1rNp7b/5Jdn09jVRzjUslR3VepRFyvgj+i7ny28UQ2huGWb2Nj8p4VYHO908us7lwIeOBDlfRKjs4kdW4Sf6CmAbf0m+9wm1HmKNQiED7ptRtrXBAMbuDTCGHyswMMaCA8GENIx7gMbJuCpa49L59L+dPYiU7wPpYov0YOAnnmhb7BCrXymOMsHbdTFhULtp9Q96Ec6+ARthgLtE1f/zKv8uquPnRekorhlg8RfRFNEGbJiBOFbj+p85FO6r+Y6fIpj8hFpGZHYRRRKZgfuqiJDW/b6qqQVjNYWl28D+fzIQ7fEa3z0nkfXG9yeYbssXbveW9OQz8ivwPutnMypFGVV4DUP5TUkx4y2NChD/W659H6SdyIjsBlcV1QmH4CQ28kqEYTX2NxOyXMq7rClnaNO5kn5kR7C1wmXwmbZxXfH+jQLqqhWlmbBzGqVJeiNNmAKNPs4L1T9V9+OX08y2OttMqZVauSb50YX0bvjrxy66JB9RLx/5S1a3LDxhGa6G7F4Pyr9o3tDGFMYNxMfsyIznjmKNQUsiKQ17qONh5bU9S6fO4YnmCNeBTUT05ezZ+2kxr2pHYQYLe3jlrdWX7RXXycWCvID00DGEvhY/EK4zraFW55pIeX8mVLOKc6kmlqcA8iwm1ejwbRTrGX6zlTJQWvRdNRHotMY1TLcjGs37M7WOVRIUPHZgj1aVMQUtkuf/UHZ5rfFyaKSZ7F3gytD+3PtZyT0c/jmFdOJgiG1g9NJNbgoxYp7yu6sv25w7yd8MMKtWaGvCz468Jo3VksyAtcAwNKo/WBBYjKeVheaSMBObHtAezoiXkoIUi3rhaD3Hv8FGkqkVfGbDnSWgkz37/ueUUCztoGT6w5ZBH3SyIIPep7AiIAWqJlWzWVbO8KCU8kqjjyFIpqVHjUT3T2CGZpkSFHmNggE4aQp5LUJLMQ+IJei7mLepJdCgNea+Vhi/zCdjMK5O6JOnix8CBi8imGoUrvkmaGkm09zAc7+yUpqDe+oz2M7eqOPdguKxuWKRuWsKFQZaD7eyQJl0zvrLr2OyWy5jX/FOiMoDdq9KJnMgCs1jDs5I6VFBJRkRkfSw4sYHbAS+IdY5aE6nWMXhwzFLr7e7Rnt3riWY/YJ50jE3um+NeR6utoulTWGPcJ3MDrBVXAWTjolaJb6lPhww4AVhS+QK52rCxqOCI9aZ0QObEq9+6ayJm9lDS1/OOZ6kqGb1VheB3YuOKu5+oHfgRg1fc17lTOZglJ81eULx8ijieKAvnNfy8cTWeY4svqWgdti1Q7N06aeClphH33uzwD4KrPgC5RxR3PnAXbI4zp8Z31N2Sn7kKbX+f2YXUPSPxxnuqhZsKSSbpWIPPHeqbisGjD9W0utMWfQKcHC7Qnf7fdLcMdmFSdYCJZRljZ+ta7vwzdeOeRsq6vn/93pmmAtubBbMP0m035Yv2OEtyeGz8ivwvutnY00Ck2vUsxUceDiU+wXDBgRV3CVZXQe8SxnkODJJnl2m6tUWt4oB2/Cp/3A5+jWMtjgmY93koAaPOweuxUdGu3rQnOk1cAZY8vBHmH51dknvvZbpv1S5KrN7fmKfqDQG4pi+4lr1oiF9Yssm9L4+19F54JCz7QTInbgMZXahkMFnNWfWaxtt5HliMU4gXiXccMRzxZq/JvxsTg8w61bUbIKN7bdzdQZBf4dmb/Tum9BpmMXZ0Y34Hi0+prgzv0RoNLBq0ql4+3PmQBTY/YrtAhN10CNCJk4E4gVK03cqyUowP6JcESHlFsUeTVAH3JifSbJSzBUPq1po7+U4r/I7NS/Vv7YCL50+64rNuxkbasDHvcxHpI5adQ1ouKVRotIf9BKc7T9slAEeLm7gI/X8XA21ervmxqGaoj+QxqsMEVd8D4c5UEaIGgTwP8RF6bxc28F0qxMOvDXCz07X7zYoquaaoC2ZTLOHX7Rh53xPTvXMfH9eZpfKHvIN0sfYivPinRHS1CVh+ejBsbzBQEWtg1mjUM4oavATfsORPr3tDr65oG7IxcPTk628nCaoTZ2JurG2YM888/C9p+ekDtfJgFGbwakkU+t+iSfdxptqQI4vezZM9MgcHbg8bhvPEeg/LsrA1Elr8DnX4YWbAgYA4iZZ1lB8jcC3QBvbEsLU5L+30nsXSM0atX4jqCLXsPmV9PrrcvM58ocJdN9fiwQPe3dTUcQQqyxsxjudtByhW00DYgTTEGGjqIU65lj6mPEXY4eep4MHSfRPNnm/wNJjtkwwCdpJ5b68vrq5XZGLctfi/zvKP5IqRAc19rgETHw/1WEfgHwhuxNogwSNFKsEZ1FgR5+EJTRStnEZjUKghYVB7kHp7XANPkL81myIa7wmntz8ght48pcMzBneSssdu8P7qPra7MCbeSR/vkE39gu+5gt5ZumB6iVbCNaZ1nas/8W5xmmiAMukmdog5khZ+wp6Kq5vBs5gwXfp8UF1o9qK01PlcW2TeMqKzWKf21VWsc29yiKxAKMFvS6l/lP7CaInfQMU5CUAwKm3TxoBAODR0MK53VeutkrhgwBAAeyL/9VDH6fmMJ1L6QEouMPR+Uq7q5NGa5VsPM6YR5sKPJrCiOFhYpYAULhQZOoI0+98fhyjmj9VMIBHjqIj9wWuGZYjAnJXRsZRpxsk57Do7GCOMJoXCPBC2goAgN3n3hKBBTDPng5RVAz88pQmU/jsuA3NbP7pLYlDoMh//WwzdvYjwe9F5pqAqkFMpUCc78jIHqp0iM5gMXuIbybhJKHc1pLuBMExkz3CIUC9Vwz5Q8gHUgBAAMCrQKB5BiNAQqC2sNAwbp8bZaCmMMtkcWCd9LOckmK3HAvkWa/cU5eEWns0u67VyWG3UBZB9rKcDNaVLTqc8ByAcskufd1KDYZpVuOVyF22qQt8JduuZmhfXOUn87oMxc6mPLuV2+OSdgtaTS57/hE0ya8e/hwGocvSEY49vnNmlNF6AM1sXgnvm8dPkyfPakJKsdKhaFh4iaFP7GBWFoiiarKaYVrCZWrtXg7w5uSBrTFZL3YqRNVuNQu1TJZ5Gu4Ab2seuD1X6+ZROcFvUr2U6ei9Vuf/PZwckx5QEw8UVLpCoCDtUKGgchz8Om+g3F6d/ZvjtQf+m+xWJ4GEQRDIWiigoapRUEnnvU/EHkS82IPR/NxDAgcVZuzhQLD6PTwQyiwEYpK2HACo1b466tEmQdjlNpVa1dHZrhSqLRt3stmWNaxVGczssnVo+7xczs2ojrAHr/fhVKXVN5sZTUYdIcNX79WeH8mwyWRj1vDqsrUyUnbLTJP9pmtt15t1CuZkpouTTR9qlZ0V5LJDQrQnznXKckRCH6hnfbpvM2gm3Cc3rsnanVijTIbGeKOMgxv7j60GfQTfOZXPZPixDN/K8CIUDMxJ3YvwVw0dBcAFiaZnI37XRsT/fqZFWW12h9Pl9ngRJpRxIZU2juv5QWijOEmzvCirumm7fhineVm3/Tiv+3m/H4IBgmI4QVI0w3K8IEqyomq6YVq243J7vD5/xPIf/+HxuwZf4XS4P+gLdjZnQAhGUAwnSIpm2O6mCCAEIyiGEyRFMzy2uykBCMEIiuEESdEMj+1uygBCMIJiOEFSNMNju5sKgBCMoBhOkBTN8NjupooQjKAYTpAUzbDdTRMm+BUNaH/3iI0dDwAA) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
@@ -1373,6 +1378,68 @@ function tiles(host,items,cls){const ids=items.map(x=>x[0]),tx={};items.forEach(
     nav.children[0].onclick=()=>go(i-1);nav.children[1].onclick=()=>go(i+1);box.insertBefore(nav,box.querySelector('figure'))};
   function go(n){showEv(n);const t=document.querySelectorAll('.yr')[n];t.scrollIntoView({inline:'nearest',block:'nearest'})}
   showEv(0);
+})();
+/* Краткие пояснения к старинным словам и местным названиям.
+   Формы перечислены явно: «лето» в значении времени года не заменяем. */
+(function(){
+  const entries=[
+    [['сивер'],'Север; в северных говорах также северный ветер.'],
+    [['летник'],'Южный ветер. На розе ветров обозначает направление с юга.'],
+    [['всток'],'Восток.'],
+    [['зри'],'Смотри, обрати внимание.'],
+    [['осьмая'],'Восьмая.'],
+    [['в лето'],'В год. Старинная формула записи даты.'],
+    [['писано'],'Написано.'],
+    [['не клените'],'Не ругайте, не проклинайте.'],
+    [['описались'],'Здесь: допустили описку, ошиблись при письме.'],
+    [['студёного','студёным'],'Холодного / холодным. Студёное море — старинное название Белого моря.'],
+    [['онего'],'Онежское озеро. Местное название.'],
+    [['ликов'],'Обликов. Здесь: разные виды Карелии.'],
+    [['мерило'],'Мера для сравнения или оценки.'],
+    [['котомка','котомке','котомки','котомку'],'Дорожный мешок, который носили за плечами. Здесь в него условно собираются заметки о маршруте.'],
+    [['путнику','путник'],'Путешественник, человек в пути.'],
+    [['сказитель','сказителя','сказителем','сказителями'],'Исполнитель народных сказаний и былин.'],
+    [['рунопевец','рунопевца','рунопевцем'],'Исполнитель традиционных эпических песен — рун.'],
+    [['вопленица'],'Исполнительница обрядовых плачей — причитаний.'],
+    [['причитания'],'Обрядовые плачи: напевные слова скорби, например на похоронах или при прощании невесты с родным домом.'],
+    [['погост','погоста'],'Здесь: церковный участок с храмами и колокольней. Значение слова менялось; оно могло обозначать также центр округа или кладбище.'],
+    [['лемех','лемехом'],'Небольшие фигурные деревянные пластины, которыми покрывают купола и другие части храма.'],
+    [['сени'],'Входное нежилое помещение между улицей и жилой частью дома.']
+  ];
+  const meanings=new Map(entries.flatMap(([forms,meaning])=>forms.map(form=>[form,meaning])));
+  const pattern=new RegExp('(?<![\\p{L}])('+[...meanings.keys()].sort((a,b)=>b.length-a.length).join('|')+')(?![\\p{L}])','giu');
+  const tip=document.createElement('div');tip.id='word-tip';tip.className='word-tip';tip.role='tooltip';tip.hidden=true;document.body.appendChild(tip);
+  let active=null,timer;
+  function close(){clearTimeout(timer);if(active)active.removeAttribute('aria-describedby');active=null;tip.hidden=true}
+  function position(){if(!active)return;const r=active.getBoundingClientRect(),w=tip.offsetWidth,h=tip.offsetHeight;
+    tip.style.left=Math.max(12,Math.min(innerWidth-w-12,r.left+r.width/2-w/2))+'px';
+    tip.style.top=Math.max(12,r.top>=h+20?r.top-h-10:Math.min(innerHeight-h-12,r.bottom+10))+'px'}
+  function open(word){clearTimeout(timer);if(active!==word)close();active=word;tip.textContent=word.dataset.meaning;tip.hidden=false;word.setAttribute('aria-describedby',tip.id);position()}
+  function later(){clearTimeout(timer);timer=setTimeout(close,180)}
+  function annotate(root){
+    const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);const nodes=[];
+    if(root.nodeType===Node.TEXT_NODE)nodes.push(root);else while(walker.nextNode())nodes.push(walker.currentNode);
+    nodes.forEach(node=>{const p=node.parentElement;if(!p||p.closest('script,style,textarea,button,nav,#src,.glossary-word,.word-tip,[aria-hidden="true"]'))return;
+      const matches=[...node.textContent.matchAll(pattern)];if(!matches.length)return;
+      const frag=document.createDocumentFragment();let last=0;
+      matches.forEach(m=>{frag.append(document.createTextNode(node.textContent.slice(last,m.index)));
+        const word=p.namespaceURI==='http://www.w3.org/2000/svg'?document.createElementNS(p.namespaceURI,'tspan'):document.createElement('span');
+        word.classList.add('glossary-word');word.setAttribute('tabindex','0');word.setAttribute('role','button');word.setAttribute('aria-label',m[0]+': значение слова');word.dataset.meaning=meanings.get(m[0].toLocaleLowerCase('ru'));word.textContent=m[0];frag.append(word);last=m.index+m[0].length});
+      frag.append(document.createTextNode(node.textContent.slice(last)));node.replaceWith(frag);
+    });
+  }
+  annotate(document.body);
+  // Карточки маршрута, даты и подписи обновляются без перезагрузки страницы.
+  const observer=new MutationObserver(records=>{observer.disconnect();if(active&&!active.isConnected)close();
+    records.forEach(r=>{if(r.type==='characterData')annotate(r.target);else r.addedNodes.forEach(n=>{if(n.nodeType===1||n.nodeType===3)annotate(n)})});observe()});
+  function observe(){observer.observe(document.body,{childList:true,subtree:true,characterData:true})}observe();
+  document.addEventListener('pointerover',e=>{const word=e.target.closest('.glossary-word');if(word&&e.pointerType!=='touch')open(word);else if(tip.contains(e.target))clearTimeout(timer)});
+  document.addEventListener('pointerout',e=>{if(e.target.closest('.glossary-word')||tip.contains(e.target))later()});
+  document.addEventListener('focusin',e=>{const word=e.target.closest('.glossary-word');if(word)open(word)});
+  document.addEventListener('focusout',e=>{if(e.target.closest('.glossary-word'))later()});
+  document.addEventListener('click',e=>{const word=e.target.closest('.glossary-word');if(word){e.preventDefault();e.stopPropagation();open(word)}else if(!tip.contains(e.target))close()},true);
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')close();const word=e.target.closest('.glossary-word');if(word&&(e.key==='Enter'||e.key===' ')){e.preventDefault();e.stopPropagation();open(word)}},true);
+  addEventListener('resize',close);addEventListener('hashchange',close);document.addEventListener('scroll',close,true);
 })();
 </script>
 

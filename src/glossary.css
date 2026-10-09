@@ -1,0 +1,5 @@
+/* Словарные пояснения сохраняют шрифт и цвет окружающего текста. */
+.glossary-word{cursor:help;text-decoration-line:underline;text-decoration-style:dotted;text-decoration-thickness:1px;text-underline-offset:.22em}
+.glossary-word:focus-visible{outline:2px solid var(--red);outline-offset:3px;border-radius:2px}
+#map .glossary-word{pointer-events:auto}
+.word-tip{position:fixed;z-index:10000;box-sizing:border-box;width:max-content;max-width:min(310px,calc(100vw - 24px));padding:12px 15px;border:1px solid var(--muted);border-radius:3px;background:var(--surface);color:var(--ink);box-shadow:0 5px 22px #0003;font:16px/1.5 var(--body,'PT Serif',serif);letter-spacing:normal;text-transform:none}
