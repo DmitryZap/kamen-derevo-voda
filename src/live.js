@@ -38,9 +38,9 @@ function tiles(host,items,cls){const ids=items.map(x=>x[0]),tx={};items.forEach(
 
 /* ---- титул: сказитель и снимки в оглавлении ---- */
 (function(){const pool=[];STOPS.forEach((s,i)=>{if(i!==9)s.facts.forEach(f=>pool.push([f,s.name,i]))});let k=Math.floor(Math.random()*pool.length);
-  const t=H('div','teller','<div class="emb2"></div><p></p><button class="btn ghost" id="tellMore">Ещё сказ</button>');t.querySelector('.emb2').appendChild(smallEmb('wood'));
+  const t=H('div','teller','<div class="emb2"></div><p></p><button class="btn ghost" id="tellMore">Ещё подробность</button>');t.querySelector('.emb2').appendChild(smallEmb('wood'));
   $('#tocbox').insertBefore(t,$('#toc'));
-  const draw=()=>{const f=pool[k];t.querySelector('p').innerHTML=`${f[0]}.<small>Сказитель говорит об остановке «<a href="#route" data-stop="${f[2]}">${f[1]}</a>»</small>`};
+  const draw=()=>{const f=pool[k];t.querySelector('p').innerHTML=`${f[0]}.<small>Из рассказа об остановке «<a href="#route" data-stop="${f[2]}">${f[1]}</a>»</small>`};
   t.querySelector('#tellMore').onclick=()=>{k=(k+1+Math.floor(Math.random()*(pool.length-1)))%pool.length;draw()};
   t.addEventListener('click',e=>{const a=e.target.closest('a[data-stop]');if(a)show(+a.dataset.stop)});draw();
   const TI={region:'g-paanajarvi-2',people:'c-veps-1',economy:'e-ore3-2',culture:'c-kantele-2',names:'p-derzhavin-1',route:'06-kizhi-1',time:'h-pg-kem-2',quiz:'s-belomorsk-1',src:'h-kalevala-3'};
@@ -69,7 +69,7 @@ function tiles(host,items,cls){const ids=items.map(x=>x[0]),tx={};items.forEach(
 /* ---- глава вторая: сто жителей и три слова ---- */
 (function(){const sec=$('#people'),pager=sec.querySelector('.pager');
   const w=H('div','two',`<div><h3 class="sub-h">Если бы в Карелии жило сто человек</h3><div class="chips" id="wafChips" role="group" aria-label="Что показать"></div><div class="waffle" id="waf" role="img"></div><div class="wleg" id="wleg"></div><figcaption id="wafSrc" style="font-size:.86rem;font-style:italic;color:var(--muted);margin-top:10px"></figcaption></div>
-   <div><h3 class="sub-h">Три слова на четырёх языках</h3><p class="sub-p">Камень, дерево и вода звучат у соседних народов почти одинаково: языки родственные, прибалтийско-финские.</p><div class="chips" id="lngChips" role="group" aria-label="Язык"></div><dl class="words" id="words"></dl><p style="font-size:.86rem;font-style:italic;color:var(--muted);margin-top:12px">Написание упрощённое; перед защитой сверьте со словарём.</p></div>`);
+   <div><h3 class="sub-h">Как звучит слово «вода»</h3><p class="sub-p">Вепсский и карельский родственны. Но даже внутри карельского формы различаются: переключите язык или наречие и сравните написание.</p><div class="chips" id="lngChips" role="group" aria-label="Язык"></div><dl class="words" id="words"></dl><p style="font-size:.86rem;font-style:italic;color:var(--muted);margin-top:12px">Источник: <a href="https://dictorpus.krc.karelia.ru/en/dict/lemma/17526">ВепКар, статья vezi</a>, КарНЦ РАН. Показаны словарные варианты; внутри наречий существуют местные различия.</p></div>`);
   w.style.marginTop='10px';sec.insertBefore(w,pager);
   for(let i=0;i<100;i++){const c=H('i');c.style.setProperty('--i',i);$('#waf').appendChild(c)}
   const M=[['Где живут',[['Петрозаводск',45,'var(--red)'],['Другие города и посёлки',35,'var(--wood)'],['Село',20,'var(--water)']],'Оценка на 1 января 2024 года, Карелиястат.'],
@@ -77,8 +77,8 @@ function tiles(host,items,cls){const ids=items.map(x=>x[0]),tx={};items.forEach(
   function set(m){const cells=[...$('#waf').children];let k=0;$('#wleg').innerHTML='';M[m][1].forEach(([n,v,c])=>{for(let j=0;j<v;j++)cells[k++].style.background=c;$('#wleg').insertAdjacentHTML('beforeend',`<span><i style="background:${c}"></i>${n}<b>${v}</b></span>`)});
     $('#waf').setAttribute('aria-label',M[m][1].map(x=>x[0]+' '+x[1]).join(', '));$('#wafSrc').textContent=M[m][2];document.querySelectorAll('#wafChips .chip').forEach((c,j)=>c.setAttribute('aria-pressed',j===m))}
   M.forEach((x,i)=>{const b=H('button','chip',x[0]);b.onclick=()=>set(i);$('#wafChips').appendChild(b)});set(0);
-  const LG=[['Карельский',['kivi','puu','vesi','Terveh!','Passipo']],['Ливвиковский',['kivi','puu','vezi','Terveh!','Passibo']],['Вепсский',['kivi','pu','vezi','Tervhen!','Spasib']],['Финский',['kivi','puu','vesi','Terve!','Kiitos']]],RU=['камень','дерево','вода','здравствуй','спасибо'];
-  function lang(i){$('#words').innerHTML=RU.map((r,j)=>`<dt>${r}</dt><dd lang="${i===3?'fi':i===2?'vep':'krl'}" style="animation-delay:${j*60}ms">${LG[i][1][j]}</dd>`).join('');document.querySelectorAll('#lngChips .chip').forEach((c,j)=>c.setAttribute('aria-pressed',j===i))}
+  const LG=[['Собственно карельское',['vesi / vezi / veži'],'krl'],['Ливвиковское',['vezi'],'olo'],['Людиковское',['vezi / veži'],'lud'],['Вепсский',['vezi'],'vep']],RU=['вода'];
+  function lang(i){$('#words').innerHTML=RU.map((r,j)=>`<dt>${r}</dt><dd lang="${LG[i][2]}" style="animation-delay:${j*60}ms">${LG[i][1][j]}</dd>`).join('');document.querySelectorAll('#lngChips .chip').forEach((c,j)=>c.setAttribute('aria-pressed',j===i))}
   LG.forEach((x,i)=>{const b=H('button','chip',x[0]);b.onclick=()=>lang(i);$('#lngChips').appendChild(b)});lang(0);
 })();
 
@@ -99,13 +99,13 @@ function tiles(host,items,cls){const ids=items.map(x=>x[0]),tx={};items.forEach(
   const w=H('div','',`<h3 class="sub-h">Восемь вещей, по которым узнают Карелию</h3><p class="sub-p">Нажмите на любую.</p><div id="cultTiles"></div>`);sec.insertBefore(w,pager);
   tiles($('#cultTiles'),[
    ['c-kantele-2','Кантеле','Щипковый инструмент, родня гуслям. Древнее кантеле долбили из цельного куска дерева и натягивали пять струн. В «Калевале» первое кантеле Вяйнямёйнен делает из челюсти огромной щуки.'],
-   ['c-kalitki-3','Калитки','Открытые пирожки из ржаного пресного теста с пшённой, ячневой или картофельной начинкой. По-карельски sipainiekku. Говорили: «калитка просит восьмёрки», то есть восьми составных частей.'],
+   ['c-kalitki-3','Калитки','Открытые пирожки из ржаного пресного теста с пшённой, ячневой или картофельной начинкой. При сравнении рецептов обращайте внимание на тесто, начинку и форму защипов: у одного блюда бывают местные варианты.'],
    ['h-kalevala-3','«Калевала»','Первое издание 1835 года. Лённрот сложил эпос из рун, записанных в деревнях Беломорской Карелии; день подписания предисловия, 28 февраля, стал праздником.'],
-   ['c-birch-2','Карельская берёза','Разновидность берёзы с узорчатой, «мраморной» древесиной. Растёт медленно, ценится на вес, а не на кубометры. Рубить её в лесу запрещено.'],
+   ['c-birch-2','Карельская берёза','Разновидность берёзы с узорчатой, «мраморной» древесиной. На крупном снимке виден рисунок волокон. Именно древесина, а не белая кора отличает её на этом изображении.'],
    ['c-kizhi-house-2','Северная изба','Дом-комплекс: жильё, сени, хлев и сарай под одной крышей, чтобы зимой не выходить на мороз. Этот стоит в музее на Кижах.'],
-   ['c-chapel-1','Часовни','В деревне без церкви молились в часовне. В Заонежье и Олонецкой Карелии их сотни, и почти у каждой своя роща.'],
+   ['c-chapel-1','Часовни','В деревне без церкви молились в часовне. Часовня могла быть центром поселения вместе с окружающей рощей; такое расположение описано, например, в Кинерме.'],
    ['h-vyg-3','Выговская книга','Старообрядцы Выга держали свои школы и мастерские. Их рукописи с пышными заставками узнают по «поморскому орнаменту».'],
-   ['c-veps-1','Вепсский дом','Шёлтозеро на берегу Онего, центр вепсской земли. В таком купеческом доме работает единственный в России музей вепсской культуры.']],'four');
+   ['c-veps-1','Вепсский дом','Шёлтозеро на берегу Онего, центр вепсской земли. В таком купеческом доме работает Шёлтозерский вепсский этнографический музей.']],'four');
 })();
 
 /* ---- глава пятая: лица ---- */
@@ -117,10 +117,11 @@ function tiles(host,items,cls){const ids=items.map(x=>x[0]),tx={};items.forEach(
 })();
 
 /* ---- глава шестая: путник на карте, котомка, вёрсты ---- */
-(function(){let seen=new Set();try{seen=new Set(JSON.parse(localStorage.getItem('kdv-seen')||'[]'))}catch(e){}
+(function(){let seen=new Set();try{seen=new Set(JSON.parse(localStorage.getItem('kdv-seen')||'[]').filter(i=>Number.isInteger(i)&&i>=0&&i<STOPS.length))}catch(e){}
   const trav=el('circle',{id:'trav',r:6,cx:STOPS[0].x,cy:STOPS[0].y},map);trav.style.pointerEvents='none';
   const bar=H('div','playbar','<button class="btn" id="playB">▶ Пройти весь маршрут</button><span id="playT" style="font-style:italic;color:var(--muted)"></span>');$('#filters').after(bar);
   const kot=H('div','kotomka');STOPS.forEach((s,i)=>{const v=smallEmb(s.m,true);v.dataset.i=i;kot.appendChild(v)});kot.appendChild(H('span'));$('#stoplist').after(kot);
+  const notebook=H('details','field-task','<summary>Заметки из котомки</summary><ul></ul>');kot.after(notebook);
   const km=(a,b)=>{const R=6371,r=Math.PI/180,dl=(b.lat-a.lat)*r,dn=(b.lon-a.lon)*r,h=Math.sin(dl/2)**2+Math.cos(a.lat*r)*Math.cos(b.lat*r)*Math.sin(dn/2)**2;return Math.round(2*R*Math.asin(Math.sqrt(h)))};
   let total=0;for(let i=1;i<STOPS.length;i++)total+=km(STOPS[i-1],STOPS[i]);
   let raf=0;function move(a,b){cancelAnimationFrame(raf);if(calm||a===b){trav.setAttribute('cx',STOPS[b].x);trav.setAttribute('cy',STOPS[b].y);return}
@@ -129,6 +130,7 @@ function tiles(host,items,cls){const ids=items.map(x=>x[0]),tx={};items.forEach(
       trav.setAttribute('cx',path[i].x+(path[i+1].x-path[i].x)*q);trav.setAttribute('cy',path[i].y+(path[i+1].y-path[i].y)*q);if(p<1)raf=requestAnimationFrame(f)})(t0)}
   function after(i,prev){map.appendChild(trav);move(prev,i);seen.add(i);try{localStorage.setItem('kdv-seen',JSON.stringify([...seen]))}catch(e){}
     kot.querySelectorAll('svg').forEach(v=>v.classList.toggle('v',seen.has(+v.dataset.i)));kot.querySelector('span').textContent=seen.size===STOPS.length?'Котомка полна: все двенадцать остановок пройдены.':`В котомке ${seen.size} из ${STOPS.length}: узор появляется за каждую открытую остановку.`;
+    notebook.querySelector('ul').innerHTML=[...seen].sort((a,b)=>a-b).map(k=>`<li><b>${STOPS[k].name}.</b> ${STOPS[k].takeaway}</li>`).join('');
     const nx=$('#card .next');if(nx&&i<STOPS.length-1)nx.insertAdjacentHTML('beforeend',`<span class="km">По прямой до следующей остановки ${km(STOPS[i],STOPS[i+1])} км.</span>`);
     else if(nx)nx.insertAdjacentHTML('beforeend',`<span class="km">По прямой от точки к точке весь путь составил ${total} км.</span>`)}
   const _show=show;show=function(i){const prev=cur;_show(i);after(i,prev)};
