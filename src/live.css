@@ -86,3 +86,13 @@ img.lb{cursor:zoom-in}
   .person .face{transition:filter .4s,transform .4s}.person:hover .face{filter:none;transform:scale(1.04)}
 }
 [hidden]{display:none!important}
+
+/* Документальные подробности используют цвета и шрифты существующей книги. */
+.source-note{border-left:2px solid var(--wood);padding:0 0 0 16px;margin:22px 0}
+.source-note h4{font:400 1.2rem var(--display);margin:0 0 8px;color:var(--ink)}
+.source-note p{margin:0 0 10px}
+.source-note small{display:block;color:var(--muted);font-size:.86rem;overflow-wrap:anywhere}
+.field-task{border-block:1px solid var(--line);padding:12px 0;margin:18px 0}
+.field-task summary{cursor:pointer;color:var(--red);font-family:var(--display)}
+.field-task p,.field-task ul{margin:12px 0 0}
+.field-task li{margin-bottom:8px}

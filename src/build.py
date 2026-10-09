@@ -25,8 +25,9 @@ hero='''<header class="hero">
     <span class="row"><span class="emb" data-m="wood"></span><span class="w">Дерево</span><span class="gl">Кижи, карельские деревни, шатровые храмы, бумага Кондопоги и Сегежи</span></span>
     <span class="row"><span class="emb" data-m="water"></span><span class="w">Вода</span><span class="gl">Ладога и Онего, шестьдесят тысяч озёр, Кивач, Беломорканал, Белое море</span></span>
   </h1>
-  <p class="sub">Карелию проще всего понять через три материала, из которых она сделана. На камне шесть тысяч лет назад выбивали лосей и лодки. Из дерева без единого гвоздя в срубе поставили 22 главы Кижей. Вода занимает здесь столько места, что дороги веками были озёрными. Маршрут из 12 остановок идёт от Ладоги к Белому морю и собирает все три.</p>
+  __INTRO__
   '''+facts
+hero=hero.replace('__INTRO__',re.search(r'<p class="sub">.*?</p>',s[a:b],re.S).group(0))
 s=s[:a]+hero+s[b:]
 # главы
 CH=[('region','а','первая'),('people','в','вторая'),('economy','г','третья'),('culture','д','четвёртая'),('names','є','пятая'),('route','ѕ','шестая'),('time','з','седьмая'),('quiz','и','осьмая'),('src','ѳ','девятая')]
@@ -42,8 +43,8 @@ rep('<div class="eyebrow">Глава седьмая. Лента времени</
 rep('<h2>Проверьте себя</h2>','<h2>Испытание путнику</h2>')
 # зри
 rep('<p>Климат переходный','<p class="zri"><b>Зри:</b>Ладога и Онего, первое и второе озёра Европы, оба лежат в Карелии или у её границ.</p>\n      <p>Климат переходный')
-rep('<p>Лес перерабатывают','<p class="zri"><b>Зри:</b>половину промышленного выпуска даёт отрасль, где работают трое из ста.</p>\n      <p>Лес перерабатывают')
-rep('<p>Русское Заонежье','<p class="zri"><b>Зри:</b>один эпос записан здесь у карел, другой у русских, в соседних волостях и в одни и те же десятилетия.</p>\n      <p>Русское Заонежье')
+rep('<p>Лес перерабатывают','<p class="zri"><b>Зри:</b>доля отрасли в выпуске и доля её работников считаются от разных итогов. Годы наблюдений тоже нужно сверять.</p>\n      <p>Лес перерабатывают')
+rep('<p>Русские былины','<p class="zri"><b>Зри:</b>у песни есть исполнитель и собиратель. В истории фольклора стоит запоминать обоих.</p>\n      <p>Русские былины')
 # подвал
 a=s.index('<footer>');b=s.index('</footer>')
 s=s[:a]+'''<footer><div class="band" data-s="5"></div>
@@ -86,7 +87,6 @@ rep("""<div class="top"><span class="tag">${m.n}</span><span class="num" style="
 rep("""<div style="font-size:.88rem"><a href""","""<div style="font-size:.95rem"><a href""")
 rep("""$('#event').innerHTML=`<div class="y">${e[0]}</div><div><span class="tag">${MAT[e[1]].n}</span></div>""","""const AM={'1323':6831,'1617':7125,'1694':7203},am=AM[e[0]];
   $('#event').innerHTML=`<div class="y">${am?'В лето '+am:(/^\\d+$/.test(e[0])?'В лето '+e[0]:'Прежде летописей')}</div>${am?`<div class="am">от сотворения мира, как считали тогда; по нынешнему счёту ${e[0]} год</div>`:(/^\\d+$/.test(e[0])?'':'<div class="am">V–IV тысячелетия до нашей эры</div>')}<span class="tag">${MAT[e[1]].n}</span>""")
-rep("const v=score>=7?'Отличный результат: можно вести экскурсию.':score>=4?'Хорошо. Загляните в разделы, где ошиблись.':'Стоит пройти маршрут ещё раз.'","const v=score>=7?'Знатно. Можно самому водить путников.':score>=4?'Добро. Загляните в главы, где ошиблись.':'Стоит пройти маршрут ещё раз.'")
 rep("stroke:'var(--accent)','stroke-width':2},s);","stroke:'var(--red)','stroke-width':2},s);")
 s=s.replace("fill:'var(--accent)',stroke:'var(--surface)'","fill:'var(--red)',stroke:'var(--bg)'")
 s=s.replace('background:var(--accent)','background:var(--red)')
@@ -124,9 +124,6 @@ s=s.replace('</style>',open('live.css',encoding='utf8').read()+'</style>',1)
 k=s.index('<script>')+8;s=s[:k]+open('head.js',encoding='utf8').read().replace('__PH__',open('PH.json',encoding='utf8').read())+s[k:]
 rep('${ph}','${galleryHTML(i)}')
 rep('<div class="facts">','<div class="slides" id="slides" aria-label="Снимки Карелии"></div>\n  <div class="facts">')
-rep("let qi=0,score=0;","QUIZ.splice(1,0,['Кто выбит на этой скале шесть тысяч лет назад?',['Охотники на лыжах','Воины с копьями','Пляшущие шаманы','Рыбаки с сетями'],0,'Это лыжники из Залавруги под Беломорском, одно из древнейших в мире изображений лыж.','s-belomorsk-1']);QUIZ.splice(4,0,['Где сделан этот снимок?',['В Рускеале','На Киваче','На Валааме','На Воттовааре'],0,'Это затопленный мраморный карьер в Рускеале.','s-ruskeala2-3']);QUIZ.push(['Этот храм сгорел в 2018 году. Какой?',['Успенская церковь в Кондопоге','Преображенская церковь в Кижах','Успенский собор в Кеми','Часовня в Кинерме'],0,'Успенская церковь 1774 года, 42 метра высотой. Снимок сделан до пожара.','s-kondopoga3-3']);let qi=0,score=0;")
-rep("<h3>${q[0]}</h3><div class=\"opts\">","<h3>${q[0]}</h3>${q[4]?`<img class=\"qimg\" src=\"${pic(q[4])}\" alt=\"Снимок к вопросу\">`:''}<div class=\"opts\">")
-rep('<p>Восемь вопросов по материалам путеводителя.','<p>Одиннадцать вопросов по материалам путеводителя, три из них по снимкам.')
 k=s.rindex('</script>');s=s[:k]+open('live.js',encoding='utf8').read()+s[k:]
 SKEL='<!doctype html>\n<html lang="ru">\n<head>\n<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">\n<meta name="description" content="Интерактивный путеводитель по Карелии: камень, дерево, вода. Маршрут из 12 остановок от Ладоги до Белого моря.">\n<style>html{color-scheme:light}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>\n'
 open('../index.html','w',encoding='utf8').write(SKEL+s.replace('<nav ','</head>\n<body>\n<nav ',1)+'\n</body>\n</html>\n');print('index.html',len(s)//1024,'KB')

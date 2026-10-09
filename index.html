@@ -320,6 +320,16 @@ img.lb{cursor:zoom-in}
   .person .face{transition:filter .4s,transform .4s}.person:hover .face{filter:none;transform:scale(1.04)}
 }
 [hidden]{display:none!important}
+
+/* Документальные подробности используют цвета и шрифты существующей книги. */
+.source-note{border-left:2px solid var(--wood);padding:0 0 0 16px;margin:22px 0}
+.source-note h4{font:400 1.2rem var(--display);margin:0 0 8px;color:var(--ink)}
+.source-note p{margin:0 0 10px}
+.source-note small{display:block;color:var(--muted);font-size:.86rem;overflow-wrap:anywhere}
+.field-task{border-block:1px solid var(--line);padding:12px 0;margin:18px 0}
+.field-task summary{cursor:pointer;color:var(--red);font-family:var(--display)}
+.field-task p,.field-task ul{margin:12px 0 0}
+.field-task li{margin-bottom:8px}
 </style>
 <style>
 @font-face{font-family:"Ruslan Display";font-style:normal;font-weight:400;font-display:swap;src:url(data:font/woff2;base64,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) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
@@ -350,7 +360,7 @@ img.lb{cursor:zoom-in}
     <span class="row"><span class="emb" data-m="wood"></span><span class="w">Дерево</span><span class="gl">Кижи, карельские деревни, шатровые храмы, бумага Кондопоги и Сегежи</span></span>
     <span class="row"><span class="emb" data-m="water"></span><span class="w">Вода</span><span class="gl">Ладога и Онего, шестьдесят тысяч озёр, Кивач, Беломорканал, Белое море</span></span>
   </h1>
-  <p class="sub">Карелию проще всего понять через три материала, из которых она сделана. На камне шесть тысяч лет назад выбивали лосей и лодки. Из дерева без единого гвоздя в срубе поставили 22 главы Кижей. Вода занимает здесь столько места, что дороги веками были озёрными. Маршрут из 12 остановок идёт от Ладоги к Белому морю и собирает все три.</p>
+  <p class="sub">В Кижах дерево стало храмом, в Кондопоге — бумагой. Рускеальский мрамор увезли в Петербург, а на берегу Выга рисунки остались там, где их выбили тысячи лет назад. По этим следам и пройдём: от Ладоги до Белого моря, через двенадцать мест с разной судьбой. По дороге заглянем в музейные описания, воспоминания собирателей былин и записи о ремонте старых церквей.</p>
   <div class="slides" id="slides" aria-label="Снимки Карелии"></div>
   <div class="facts">
     <div class="fact"><div class="v">180 520 км²</div><div class="l">площадь республики</div></div>
@@ -363,7 +373,7 @@ img.lb{cursor:zoom-in}
 
 <section id="region">
   <div class="band" data-r="0"></div>
-  <div class="sec-head"><span class="cn" aria-hidden="true">а</span><div class="eyebrow">Глава первая. География и ресурсы</div><h2>Край на древнем щите</h2></div>
+  <div class="sec-head"><span class="cn" aria-hidden="true">а</span><div class="eyebrow">Глава первая. География и ресурсы</div><h2>Что оставил ледник</h2></div>
   <div class="two">
     <div class="prose bukv">
       <p>Карелия лежит на северо-западе России, между Ладожским и Онежским озёрами на юге и Белым морем на северо-востоке. С севера на юг республика тянется примерно на 660 км. На западе проходит граница с Финляндией длиной около 800 км.</p>
@@ -388,7 +398,7 @@ img.lb{cursor:zoom-in}
 
 <section id="people">
   <div class="band" data-r="1"></div>
-  <div class="sec-head"><span class="cn" aria-hidden="true">в</span><div class="eyebrow">Глава вторая. Население</div><h2>За 35 лет республика потеряла треть жителей</h2></div>
+  <div class="sec-head"><span class="cn" aria-hidden="true">в</span><div class="eyebrow">Глава вторая. Население</div><h2>Кто живёт между озёрами</h2></div>
   <div class="two">
     <figure>
       <div class="fig-t">Население Карелии, тыс. человек</div>
@@ -397,9 +407,9 @@ img.lb{cursor:zoom-in}
       <figcaption>Источник: Росстат, Карелиястат. Шкала лет равномерная, точки стоят на годах учёта.</figcaption>
     </figure>
     <div class="prose bukv">
-      <p>В 1989 году в Карелии жили 790 тысяч человек, к началу 2024 года осталось 524 тысячи. Причины обычные для Севера: молодёжь уезжает в Петербург и Москву, смертность выше рождаемости.</p>
+      <p>В 1989 году в Карелии жили 790 тысяч человек, к началу 2024 года осталось 524 тысячи. Это примерно на треть меньше. Сам график показывает изменение численности; чтобы объяснить его, нужны отдельные данные о рождениях, смертях и миграции.</p>
       <p>Четверо из пяти жителей живут в городах (79,9 %), причём почти половина всего населения приходится на Петрозаводск: 235,7 тысячи человек. В северных районах, Калевальском, Лоухском и Муезерском, на квадратный километр приходится 0,4 человека.</p>
-      <p>Карелы, давшие республике имя, составляют меньшинство. По переписи 2010 года их было 45,6 тысячи, по переписи 2021 года осталось 25,9 тысячи. Карельский язык делится на собственно карельское, ливвиковское и людиковское наречия. Вепсы живут на юго-западном берегу Онего, вокруг села Шёлтозеро.</p>
+      <p>Карелы, давшие республике имя, составляют меньшинство. В таблице за 2010 год — 45,6 тысячи карелов. Переписная численность зависит и от того, сколько людей указали свою национальность, поэтому её изменение нельзя целиком объяснять переездом или естественной убылью. Карельский язык делится на собственно карельское, ливвиковское и людиковское наречия. Вепсы живут на юго-западном берегу Онего, вокруг села Шёлтозеро.</p>
     </div>
   </div>
   <div class="two" style="margin-top:28px">
@@ -407,18 +417,18 @@ img.lb{cursor:zoom-in}
       <div class="fig-t">Народы Карелии, тыс. человек</div>
       <div class="fig-s">Шесть самых многочисленных, перепись 2010 года</div>
       <div id="ethChart"></div>
-      <figcaption>Источник: Всероссийская перепись населения 2010 года. Полная разбивка по переписи 2021 года здесь не приводится; для карелов она дала 25,9 тыс. человек.</figcaption>
+      <figcaption>Источник: Всероссийская перепись населения 2010 года. Это исторический срез за 2010 год, а не национальный состав республики сегодня.</figcaption>
     </figure>
     <div class="prose">
       <h3>Языки</h3>
-      <p>Государственный язык республики русский. Карелия остаётся единственной республикой России, где язык титульного народа не имеет статуса государственного: карельская письменность основана на латинице, а закон требует для государственных языков кириллицу. Карельский, вепсский и финский языки пользуются государственной поддержкой: на них выходят газеты, работает Национальный театр, их преподают в школах и в Петрозаводском университете.</p>
+      <p>В повседневной жизни Карелии звучат русский, карельский, вепсский и финский языки. Карельский и вепсский — родственные прибалтийско-финские языки, но смешивать их в один «местный говор» было бы ошибкой. Карельский, вепсский и финский языки пользуются государственной поддержкой: на них выходят газеты, работает Национальный театр, их преподают в школах и в Петрозаводском университете.</p>
     </div>
   </div>
 </section>
 
 <section id="economy">
   <div class="band" data-r="2"></div>
-  <div class="sec-head"><span class="cn" aria-hidden="true">г</span><div class="eyebrow">Глава третья. Экономика</div><h2>Руда даёт половину выпуска и почти не даёт рабочих мест</h2></div>
+  <div class="sec-head"><span class="cn" aria-hidden="true">г</span><div class="eyebrow">Глава третья. Экономика</div><h2>Руда, лес и работа</h2></div>
   <div class="two">
     <div style="display:flex;flex-direction:column;gap:20px">
       <figure>
@@ -433,49 +443,51 @@ img.lb{cursor:zoom-in}
         <div class="fig-s">Выпуск: 2022 год. Занятость: 2024 год, от всех занятых в экономике (231,2 тыс. человек)</div>
         <div class="pair" id="pairChart"></div>
         <div class="legend"><span><i style="background:var(--red)"></i>доля в отгрузке промышленности</span><span><i style="background:var(--muted)"></i>доля занятых</span></div>
-        <figcaption>Базы у показателей разные, сравнивать стоит порядок величин. Источник: Карелиястат.</figcaption>
+        <figcaption>Отгрузка — доля отрасли в промышленности; занятость — доля работников во всей экономике. Годы также различаются. Источник: Карелиястат.</figcaption>
       </figure>
     </div>
     <div class="prose bukv">
-      <p>Промышленность Карелии стоит на том же камне и дереве. Комбинат «Карельский окатыш» в Костомукше добывает железную руду и делает из неё окатыши для металлургии; это один из крупнейших производителей окатышей в стране. На добычу пришлось 51,6 % промышленной отгрузки 2022 года, при этом в ней занято 3,4 % работающих.</p>
-      <p class="zri"><b>Зри:</b>половину промышленного выпуска даёт отрасль, где работают трое из ста.</p>
-      <p>Лес перерабатывают в Сегеже (мешочная бумага) и Кондопоге (газетная бумага), плюс лесопильные заводы по всей республике. Обрабатывающие производства дают 36 % отгрузки и 11,7 % рабочих мест.</p>
-      <p>Вода работает дважды. Гидростанции на порожистых реках дают электричество с 1929 года, когда по плану ГОЭЛРО запустили Кондопожскую ГЭС. А в холодных чистых озёрах выращивают радужную форель: республика давно удерживает первое место в России по её садковому производству.</p>
-      <p>Самая быстрорастущая отрасль сейчас туризм. По словам главы республики, за январь–август 2025 года число туристических поездок превысило 1,5 миллиона, на 49 % больше, чем годом раньше. Доля туризма в валовом региональном продукте в 2023 году составила 3,7 %, к 2030 году её планируют довести до 8 %.</p>
+      <p>Промышленность Карелии стоит на том же камне и дереве. Комбинат «Карельский окатыш» в Костомукше добывает железную руду и делает из неё окатыши для металлургии; это один из крупнейших производителей окатышей в стране. Вся добывающая отрасль дала 51,6 % промышленной отгрузки в 2022 году. Доля её работников среди всех занятых в экономике в 2024 году — 3,4 %. Это разные показатели за разные годы: по ним нельзя вычислить производительность труда.</p>
+      <p class="zri"><b>Зри:</b>доля отрасли в выпуске и доля её работников считаются от разных итогов. Годы наблюдений тоже нужно сверять.</p>
+      <p>Лес перерабатывают в Сегеже (мешочная бумага) и Кондопоге (газетная бумага), плюс лесопильные заводы по всей республике. На все обрабатывающие производства пришлось 36 % промышленной отгрузки в 2022 году и 11,7 % общей занятости в 2024-м.</p>
+      <p>У воды несколько хозяйственных применений. Гидростанции на порожистых реках дают электричество с 1929 года, когда по плану ГОЭЛРО запустили Кондопожскую ГЭС. На озёрах размещают садковые хозяйства, где выращивают радужную форель. Для такой работы важны температура и качество воды.</p>
+      <p>В Рускеале можно проследить ещё одну перемену: бывшие выработки принимают посетителей. Камень остаётся на месте, но работа вокруг него уже другая — экскурсии, обслуживание маршрутов, перевозки. Историю промышленности здесь можно читать прямо по стенам карьера.</p>
     </div>
   </div>
 </section>
 
 <section id="culture">
   <div class="band" data-r="3"></div>
-  <div class="sec-head"><span class="cn" aria-hidden="true">д</span><div class="eyebrow">Глава четвёртая. Культура и религия</div><h2>Руны, былины и шатры</h2></div>
+  <div class="sec-head"><span class="cn" aria-hidden="true">д</span><div class="eyebrow">Глава четвёртая. Культура и религия</div><h2>Что помнят и передают</h2></div>
   <div class="two">
     <div class="prose bukv">
       <h3>Эпос и ремесло</h3>
       <p>В деревнях Беломорской Карелии Элиас Лённрот в 1830-е годы записал руны, из которых составил «Калевалу». Первое издание вышло в 1835 году, полное в 1849-м. Посёлок Ухта, центр этих мест, с 1963 года называется Калевала.</p>
-      <p class="zri"><b>Зри:</b>один эпос записан здесь у карел, другой у русских, в соседних волостях и в одни и те же десятилетия.</p>
-      <p>Русское Заонежье в те же годы оказалось заповедником былин: в 1860 году Павел Рыбников записал здесь от Трофима Рябинина сказания об Илье Муромце, которые в остальной России уже не пели.</p>
-      <p>Узнаваемые вещи карельской культуры: кантеле (щипковый инструмент, который в «Калевале» делает Вяйнямёйнен), калитки (открытые ржаные пирожки с пшённой или картофельной начинкой), заонежская вышивка красной нитью, карельская берёза с узорчатой древесиной.</p>
+      <p class="zri"><b>Зри:</b>у песни есть исполнитель и собиратель. В истории фольклора стоит запоминать обоих.</p>
+      <p>Русские былины записывали в Заонежье. Весной 1860 года Павел Рыбников услышал сказителя Леонтия Богданова на вынужденной остановке у Шуйнаволока: встречный ветер не дал продолжить путь по Онего. Богданов познакомил собирателя с другими исполнителями. Один из них, Трофим Рябинин, сперва отказался петь былины во время поста. Так в историю литературы вошли и непогода, и разговоры в крестьянской избе. <a href="https://site.kizhi.karelia.ru/info/about/newspaper/73/1779.html">Об этой поездке — статья фольклориста Валентины Кузнецовой в газете музея «Кижи»</a>.</p>
+      <p>В культуре республики соседствуют разные традиции: кантеле (щипковый инструмент, который в «Калевале» делает Вяйнямёйнен), калитки (открытые ржаные пирожки с пшённой или картофельной начинкой), заонежская вышивка красной нитью, карельская берёза с узорчатой древесиной.</p>
     </div>
     <div class="prose">
       <h3>Вера</h3>
-      <p>Большинство верующих православные. Карелы были крещены новгородцами в 1227 году, и монастыри стали здесь главными центрами освоения края: Валаамский на Ладоге, Александро-Свирский и Соловецкий по соседству, десятки малых пустыней в лесах.</p>
+      <p>Православная история края связана с монастырями: Валаамский на Ладоге, Александро-Свирский и Соловецкий за пределами нынешней республики. На карте важно различать исторические связи и современные административные границы.</p>
       <p>После церковного раскола XVII века Карелия стала одним из оплотов старообрядчества. Выговская пустынь, основанная в 1694 году на реке Выг, полтора века была духовной столицей беспоповцев со своими школами, иконописью и медным литьём.</p>
-      <p>В приграничных районах сохранилось лютеранство, пришедшее с финнами-ингерманландцами. А в карельских деревнях до сих пор видны следы дохристианских представлений: священные рощи вокруг часовен и карсикко, деревья с особым образом обрубленными ветвями в память о событии или человеке.</p>
+      <p>В приграничных районах сохранилось лютеранство, пришедшее с финнами-ингерманландцами. У деревенской часовни могла сохраняться роща. В Кинерме часовня и окружающие её ели образуют центр старой застройки. Это конкретное устройство деревни; само по себе оно ещё не доказывает возраст или происхождение каждого местного обычая.</p>
     </div>
   </div>
 </section>
 
 <section id="names">
   <div class="band" data-r="4"></div>
-  <div class="sec-head"><span class="cn" aria-hidden="true">є</span><div class="eyebrow">Глава пятая. Выдающиеся жители</div><h2>Люди, связанные с Карелией</h2></div>
+  <div class="sec-head"><span class="cn" aria-hidden="true">є</span><div class="eyebrow">Глава пятая. Выдающиеся жители</div><h2>Кто сохранил голос края</h2></div>
+  <p class="prose">Песни и рассказы дошли до нас благодаря исполнителям и тем, кто их записал. Здесь эти роли разделены. Рунопевец помнил и исполнял текст, собиратель выбирал, записывал и готовил его к печати; художник и поэт оставляли собственный взгляд на увиденное.</p>
   <div class="people" id="peopleGrid"></div>
 </section>
 
 <section id="route">
   <div class="band" data-r="5"></div>
   <div class="sec-head"><span class="cn" aria-hidden="true">ѕ</span><div class="eyebrow">Глава шестая. Маршрут в двенадцать остановок</div><h2>От Ладоги до Белого моря</h2>
-    <p>Маршрут идёт с юго-запада на северо-восток, как когда-то шло освоение края: от монастырской Ладоги через заводской Петрозаводск к поморскому берегу. У каждой остановки свой материал. Выберите точку на карте или листайте по порядку.</p></div>
+    <p>Начнём на Ладоге, затем перейдём к Онежскому озеру и закончим у Белого моря. Между большими видами будут небольшие подробности: банковская квартира, железо на деревянных главах, обмерный чертёж. Выберите точку на карте или читайте остановки по порядку.</p></div>
+  <p class="zri"><b>О пути.</b>Карта задаёт порядок рассказа. Линии соединяют точки по прямой и не обозначают дороги. Валаам и Кижи требуют водного участка и возвращения на материк; для поездки нужно отдельно проверить навигацию и расписания.</p>
   <div class="filters" id="filters" role="group" aria-label="Фильтр по материалу"></div>
   <div class="route">
     <div class="mapbox">
@@ -492,27 +504,43 @@ img.lb{cursor:zoom-in}
 <section id="time">
   <div class="band" data-r="6"></div>
   <div class="sec-head"><span class="cn" aria-hidden="true">з</span><div class="eyebrow">Глава седьмая. Лента времени</div><h2>Летопись: шесть тысяч лет в пятнадцати датах</h2></div>
+  <p class="prose">Выберите дату и сопоставьте её с маршрутом. Одни события оставили здания и рисунки, другие изменили границы, язык управления или повседневную жизнь. Даты здесь помогают связать главы между собой.</p>
   <div class="years" id="years" role="tablist" aria-label="Даты"></div>
   <div class="event" id="event" role="tabpanel"></div>
 </section>
 
 <section id="quiz">
   <div class="band" data-r="7"></div>
-  <div class="sec-head"><span class="cn" aria-hidden="true">и</span><div class="eyebrow">Глава осьмая. Викторина</div><h2>Испытание путнику</h2><p>Одиннадцать вопросов по материалам путеводителя, три из них по снимкам. После каждого ответа есть разбор.</p></div>
+  <div class="sec-head"><span class="cn" aria-hidden="true">и</span><div class="eyebrow">Глава осьмая. Викторина</div><h2>Испытание путнику</h2><p>Двенадцать вопросов по главам и остановкам, три — по фотографиям. После ответа можно прочитать объяснение и вернуться к соответствующей главе.</p></div>
   <div class="quiz" id="quizBox"></div>
 </section>
 
 <section id="src">
   <div class="band" data-r="8"></div>
-  <div class="sec-head"><span class="cn" aria-hidden="true">ѳ</span><div class="eyebrow">Глава девятая. Источники и дополнительные ресурсы</div><h2>Откуда данные</h2></div>
-  <ol class="sources">
-    <li><a href="https://10.rosstat.gov.ru/">Карелиястат</a>: численность и плотность населения на 1 января 2024 года, структура промышленной отгрузки за 2022 год, занятость по видам деятельности за 2024 год.</li>
-    <li><a href="https://rosstat.gov.ru/vpn/2020">Росстат, итоги Всероссийских переписей населения</a> 1989, 2002, 2010 и 2020–2021 годов.</li>
-    <li><a href="https://bigenc.ru/c/karely-5d48a6">Большая российская энциклопедия, статья «Карелы»</a>: численность карелов по переписи 2021 года.</li>
-    <li><a href="https://abnews.ru/szfo/news/karelia/2025/10/27/parfenchikov-turpotok-v-kareliyu-dostig-rekordnyh-pokazatelej">Пресс-конференция главы Карелии в ТАСС, октябрь 2025 года</a>: турпоток и доля туризма в ВРП.</li>
-    <li><a href="https://whc.unesco.org/ru/list/544">ЮНЕСКО: Кижский погост</a> и <a href="https://whc.unesco.org/ru/list/1654">Петроглифы Онежского озера и Белого моря</a>.</li>
-    <li><a href="https://kizhi.karelia.ru/">Музей-заповедник «Кижи»</a>, <a href="https://valaam.ru/">Валаамский монастырь</a>, <a href="https://ruskeala.ru/">горный парк «Рускеала»</a>, <a href="https://zapkivach.ru/">заповедник «Кивач»</a>, <a href="https://nmrk.karelia.ru/">Национальный музей Республики Карелия</a>.</li>
+  <div class="sec-head"><span class="cn" aria-hidden="true">ѳ</span><div class="eyebrow">Глава девятая. Источники и дополнительные ресурсы</div><h2>Откуда взяты подробности</h2></div>
+  <p class="prose">Ссылки на музейные описания и исследования стоят рядом с рассказами. Ниже они собраны вместе. Воспоминание участника, обмерный чертёж и статистическая таблица отвечают на разные вопросы; легенды в тексте обозначены отдельно.</p>
+  <h3>Места и документы</h3><ol class="sources"><li><a href="https://www.valaam.ru/publishing/interview/byt-sadam-na-valaame/">Валаамский монастырь: беседа с К. В. Кондрашовой, 2005</a>. Материал к остановке «Валаам»: садоводы с материка.</li>
+<li><a href="https://monuments.karelia.ru/napravlenija-dejatel-nosti/populjarizacija/est-takoj-pamjatnik/zdanie-s-kontoroj-banka-kirpichnoe-g-sortavala-ul-karel-skaja-13-1-ul-gagarina/">Центр охраны культурного наследия Карелии: дом Леандера</a>. Материал к остановке «Сортавала»: банк внизу, квартиры наверху.</li>
+<li><a href="https://rosnedra.gov.ru/data/Files/File/2397.pdf#page=4">Геологический вестник, № 5, 19 февраля 2013, с. 4 (PDF)</a>. Материал к остановке «Рускеала»: мрамор шёл и в печь.</li>
+<li><a href="https://monuments.karelia.ru/napravlenija-dejatel-nosti/populjarizacija/stat-i-ob-ob-ektah-kul-turnogo-nasledija/prjazhinskij-rajon/istoricheskaja-derevnja-kinerma/">Центр охраны культурного наследия Карелии: историческая деревня Кинерма</a>. Материал к остановке «Кинерма»: дом «брусом».</li>
+<li><a href="https://nationalatlas.ru/tom4/276.html">Национальный атлас России, том 4: Петрозаводск</a>. Материал к остановке «Петрозаводск»: рельсы внутри завода.</li>
+<li><a href="https://site.kizhi.karelia.ru/library/metamorphosis/1175.html">Музей-заповедник «Кижи»: «Из истории ремонтов и реставраций», 2005</a>. Материал к остановке «Кижи»: когда главы были железными.</li>
+<li><a href="https://a-peter.ru/subject/muzej-marcialnie-vodi/">Ассамблея петровских музеев России: музей «Марциальные воды»</a>. Материал к остановке «Марциальные воды»: у источника была и рудная история.</li>
+<li><a href="https://www.zapkivach.ru/services/nauchnaya-deyatelnost/letopis-prirody/">Заповедник «Кивач»: «Летопись природы»</a>. Материал к остановке «Водопад Кивач»: летопись без князей и войн.</li>
+<li><a href="https://whc.unesco.org/en/list/1654/">ЮНЕСКО: петроглифы Онежского озера и Белого моря</a>. Материал к остановке «Беломорские петроглифы»: сначала описать, потом истолковать.</li>
+<li><a href="https://site.kizhi.karelia.ru/collection/uspenskij-sobor-g-kem/3454">Музей-заповедник «Кижи»: предмет КП-7012/9</a>. Материал к остановке «Кемь»: собор на листе бумаги.</li>
+</ol>
+  <h3>Люди, речь и фольклор</h3><ol class="sources">
+    <li><a href="https://site.kizhi.karelia.ru/info/about/newspaper/73/1779.html">Валентина Кузнецова. «Открытие былин состоялось по воле случая»</a>. Газета музея-заповедника «Кижи»: поездка Рыбникова и встречи со сказителями.</li>
+    <li><a href="https://dictorpus.krc.karelia.ru/en/dict/lemma/17526">ВепКар, словарная статья vezi</a>. Карельский научный центр РАН: варианты слова «вода», языки и наречия.</li>
+    <li><a href="https://whc.unesco.org/en/list/544/">ЮНЕСКО: Кижский погост</a>. Состав ансамбля и его значение для истории деревянного зодчества.</li>
   </ol>
+  <h3>Статистика</h3><ol class="sources">
+    <li><a href="https://10.rosstat.gov.ru/storage/mediabank/02011_2024.pdf">Карелиястат: численность и возрастной состав населения, 2024 (PDF)</a>. Оценка общей численности на 1 января 2024 года — 523 856 человек.</li>
+    <li><a href="https://10.rosstat.gov.ru/folder/43510">Карелиястат: статистические издания</a>. Данные о промышленной отгрузке за 2022 год и занятости за 2024 год приведены с разными базами расчёта; они не описывают производительность труда.</li>
+    <li><a href="https://10.rosstat.gov.ru/Nas">Карелиястат: население</a> и <a href="https://rosstat.gov.ru/vpn/2020">Росстат: перепись 2020–2021 годов</a>. Национальный состав в диаграмме показан по переписи 2010 года; год указан непосредственно у графика.</li>
+  </ol>
+  <h3>Фотографии</h3><p class="prose">У каждого снимка указаны автор, лицензия и ссылка на оригинал. Полный перечень приведён в <a href="https://github.com/DmitryZap/kamen-derevo-voda/blob/main/CREDITS.md">списке фотографий проекта</a>. Архивные изображения утраченных построек не обозначают их современное состояние.</p>
 </section>
 <footer><div class="band" data-s="5"></div>
 <p class="colophon">Писано в лето 7535 от сотворения мира, октября в 8 день. А где описались, не клените, но исправляйте.</p>
@@ -593,67 +621,350 @@ const CN=['а','в','г','д','є','ѕ','з','и','ѳ','і','аі','ві'];
 const MAT={stone:{n:'Камень',c:'var(--stone)'},wood:{n:'Дерево',c:'var(--wood)'},water:{n:'Вода',c:'var(--water)'}};
 /* Чтобы добавить фотографию, впишите в поле photo адрес изображения (data: URI или файл рядом со страницей) и подпись в photoBy */
 const STOPS=[
- {name:'Валаам',lat:61.389,lon:30.945,m:'water',date:'монастырь известен с XIV–XV веков',photo:'',
-  text:'Архипелаг из полусотни гранитных островов в северной части Ладоги. На главном острове стоит Спасо-Преображенский монастырь; время его основания историки относят к концу XIV века, монастырское предание называет более раннее.',
-  facts:['Нынешний Спасо-Преображенский собор построен в 1887–1896 годах','В 1940 году братия ушла в Финляндию и основала там Новый Валаам','Монашеская жизнь возобновлена в 1989 году','На островах писали этюды Шишкин, Куинджи и Рерих'],
-  why:'Один из главных духовных центров русского Севера, «Северный Афон». Для России это ещё и пример того, как монастырь освоил суровый остров: сады, каналы, дороги и ферма на голых скалах.',
-  next:'С Валаама «Метеор» за час приходит в Сортавалу. Гранит, из которого сложены острова, в городе становится строительным материалом.',link:['Сайт монастыря','https://valaam.ru/']},
- {name:'Сортавала',lat:61.703,lon:30.692,m:'stone',date:'основана в 1632 году',photo:'',
-  text:'Город на северном берегу Ладоги, бывший Сердоболь. Основан шведами, с 1812 года входил в Великое княжество Финляндское, в 1918–1940 годах был финским. Центр застроен зданиями северного модерна и функционализма из местного гранита.',
-  facts:['Имеет статус исторического поселения','Здесь работали архитекторы Уно Ульберг и Элиэль Сааринен','В 1916–1918 годах в городе жил Николай Рерих','Отсюда уходят суда на Валаам и ретропоезд в Рускеалу'],
-  why:'Редкий для России цельный ансамбль финской архитектуры первой трети XX века. Город показывает пограничную историю края, который за 400 лет принадлежал трём государствам.',
-  next:'В 30 км к северу находится месторождение, откуда камень везли уже не для провинциального города, а для столицы империи.',link:['Портал «Культура.РФ»','https://www.culture.ru/']},
- {name:'Рускеала',lat:61.946,lon:30.581,m:'stone',date:'мрамор добывают с 1760-х годов',photo:'',
-  text:'Затопленный мраморный карьер с бирюзовой водой и отвесными серо-белыми стенами. Добычу начали при Екатерине II, когда Петербургу понадобился облицовочный камень. С 2005 года здесь горный парк.',
-  facts:['Главный карьер: 460 м в длину, до 100 м в ширину','Рускеальским мрамором облицован Исаакиевский собор','Камень использован в Мраморном дворце и Михайловском замке','С 2019 года сюда из Сортавалы ходит ретропоезд на паровой тяге'],
-  why:'Памятник горного дела XVIII–XX веков и наглядная связь карельских недр с парадным Петербургом. Сегодня это один из самых посещаемых природных парков страны и пример новой жизни промышленного объекта.',
-  next:'От столичного мрамора дорога уходит на восток, вглубь Олонецкой Карелии, где главным материалом всегда было дерево.',link:['Горный парк «Рускеала»','https://ruskeala.ru/']},
- {name:'Кинерма',lat:61.527,lon:32.829,m:'wood',date:'упоминается с 1563 года',photo:'',
-  text:'Деревня карел-ливвиков в Пряжинском районе. Полтора десятка домов стоят кругом около еловой рощи с часовней. Планировка и большинство построек сохранились с XIX века.',
-  facts:['Часовня Смоленской иконы Божией Матери построена во второй половине XVIII века','Деревня целиком признана памятником деревянного народного зодчества','Входит в ассоциацию «Самые красивые деревни России»','В жилых домах сохранились чёрные бани и амбары'],
-  why:'Живой образец карельской деревни, а не музейная реконструкция. Здесь видно, как устроены северный дом-комплекс и священная роща, в которой христианская часовня встала на месте более древнего культа.',
-  next:'Из крестьянской Карелии шоссе за полтора часа приводит в Петрозаводск, город, который вырос из казённого завода.',link:['Портал «Культура.РФ»','https://www.culture.ru/']},
- {name:'Петрозаводск',lat:61.787,lon:34.364,m:'stone',date:'основан в 1703 году',photo:'',
-  text:'Столица республики на берегу Онежского озера. Город начался с Петровского пушечного завода, заложенного в устье Лососинки в год основания Петербурга: рядом была руда, лес на уголь и вода для заводских колёс.',
-  facts:['Пушки и ядра завода шли на Северную войну','С 1784 года центр Олонецкой губернии','Круглая площадь сохранила ансамбль 1770-х годов','В 2015 году присвоено звание «Город воинской славы»'],
-  why:'Один из первых промышленных городов петровской России и административный центр края на протяжении 240 лет. В Национальном музее собрана вся история региона, от петроглифов до XX века.',
-  next:'С петрозаводской набережной «Метеор» за час с четвертью доходит до острова Кижи в северной части Онего.',link:['Национальный музей Республики Карелия','https://nmrk.karelia.ru/']},
- {name:'Кижи',lat:62.067,lon:35.224,m:'wood',date:'Преображенская церковь, 1714 год',photo:'',
-  text:'Остров в Онежском озере с ансамблем Кижского погоста: летняя Преображенская церковь, зимняя Покровская и колокольня. Вокруг разместился музей под открытым небом, куда свезли дома, часовни и мельницы со всего Заонежья.',
-  facts:['Преображенская церковь: 22 главы, высота 37 м','Сруб собран без гвоздей; гвоздями прибит только лемех глав','Покровская церковь построена в 1764 году, у неё девять глав','Храм 40 лет был закрыт для посетителей; реставрация закончилась в 2020 году'],
-  why:'Вершина русского деревянного зодчества и один из первых российских объектов Всемирного наследия ЮНЕСКО (1990 год). Кижи стали мировым символом всей северной плотницкой традиции.',
-  next:'Вторым шедевром той же традиции была церковь в Кондопоге, на другом берегу залива. Её история закончилась иначе.',link:['Музей-заповедник «Кижи»','https://kizhi.karelia.ru/']},
- {name:'Кондопога',lat:62.206,lon:34.268,m:'wood',date:'Успенская церковь, 1774 год',photo:'',dx:9,dy:2,
-  text:'Город на берегу Кондопожской губы. Шатровая Успенская церковь высотой 42 м считалась самым совершенным деревянным храмом Русского Севера. В августе 2018 года она сгорела; храм воссоздают по обмерным чертежам.',
-  facts:['Кондопожская ГЭС (1929) построена по плану ГОЭЛРО','Целлюлозно-бумажный комбинат выпускает газетную бумагу','В городе звучат карильоны нидерландской работы','Дерево здесь и памятник, и промышленное сырьё'],
-  why:'Место, где видна уязвимость деревянного наследия: шедевр, простоявший 244 года, погиб за несколько часов. Одновременно это один из первых индустриальных центров советской Карелии.',
-  next:'Комбинату и ГЭС понадобилась вода реки Суны. В 20 км отсюда находятся два места, которые эта вода прославила.',link:['Об Успенской церкви на сайте музея «Кижи»','https://kizhi.karelia.ru/']},
- {name:'Марциальные воды',lat:62.155,lon:33.897,m:'water',date:'курорт основан в 1719 году',photo:'',dx:-13,dy:9,
-  text:'Первый российский курорт. Железистые источники в 1714 году обнаружил заводской работник Иван Рябоев, а в 1719 году Пётр I указом учредил здесь лечебницу и назвал воды в честь Марса, бога войны и железа.',
-  facts:['Пётр I приезжал лечиться четыре раза','Церковь апостола Петра построена в 1721 году, по преданию, по рисунку царя','Содержание железа в воде одно из самых высоких среди известных источников','С 1964 года работает санаторий'],
-  why:'Отсюда начинается история курортного дела в России. Музей и церковь петровского времени показывают, как государство впервые занялось здравоохранением на научной основе.',
-  next:'В нескольких километрах к северу та же Суна падает с диабазовой гряды.',link:['Национальный музей: филиал «Марциальные воды»','https://nmrk.karelia.ru/']},
- {name:'Водопад Кивач',lat:62.268,lon:33.980,m:'water',date:'заповедник с 1931 года',photo:'',dx:-5,dy:-11,
-  text:'Равнинный водопад на реке Суне: вода четырьмя уступами падает с высоты 10,7 м. Вокруг находится один из старейших заповедников России с музеем природы и дендрарием, где растёт карельская берёза.',
-  facts:['Державин посвятил ему оду «Водопад» (1791–1794)','В 1930-е часть стока Суны отвели на Кондопожскую ГЭС, водопад стал слабее','Заповедник занимает около 11 тысяч гектаров','Здесь ведут научные наблюдения почти сто лет'],
-  why:'Одна из первых природных достопримечательностей России, вошедшая в литературу и туристические маршруты ещё в XVIII веке. История Кивача показывает цену, которую природа заплатила за индустриализацию.',
-  next:'Дальше маршрут идёт на север вдоль Онего, к Повенцу, где воду заставили работать в совсем другом масштабе.',link:['Заповедник «Кивач»','https://zapkivach.ru/']},
- {name:'Повенец, Беломорканал',lat:62.848,lon:34.826,m:'water',date:'канал построен в 1931–1933 годах',photo:'',
-  text:'У посёлка Повенец от Онежского озера начинается Беломорско-Балтийский канал. Первые семь шлюзов, «Повенчанская лестница», поднимают суда на водораздел. Канал длиной 227 км с 19 шлюзами построили за 20 месяцев силами заключённых.',
-  facts:['Соединил Белое море с Балтикой, сократив путь на тысячи километров','Строили почти без техники: тачка, кирка, деревянные шлюзы','Тысячи строителей погибли от голода и непосильного труда','В декабре 1941 года шлюзы взорвали, чтобы остановить наступление'],
-  why:'Стратегическая водная артерия и одновременно один из главных мемориалов ГУЛАГа. Никольская церковь в Повенце поставлена в память о погибших строителях.',
-  next:'Канал выходит к Белому морю у Беломорска. Там, на островах в устье Выга, находятся самые древние памятники маршрута.',link:['Музей «Беломорканал» в Медвежьегорске','https://nmrk.karelia.ru/']},
- {name:'Беломорские петроглифы',lat:64.497,lon:34.674,m:'stone',date:'около 6–7 тысяч лет назад',photo:'',
-  text:'Наскальные рисунки на гладких гранитных островах в низовьях реки Выг: Бесовы Следки, Ерпин Пудас, Залавруга. Более двух тысяч фигур выбиты кварцевыми отбойниками в эпоху неолита.',
-  facts:['Бесовы Следки открыл Александр Линевский в 1926 году','Залавругу нашёл Владислав Равдоникас в 1936 году','Среди сцен есть охота на белуху с лодок и одно из древнейших изображений лыжников','Сцены читаются как связные рассказы'],
-  why:'Вместе с онежскими петроглифами включены в список Всемирного наследия ЮНЕСКО в 2021 году. Это главный источник знаний о жизни и верованиях людей каменного века на севере Европы.',
-  next:'Море, на которое охотники выходили за белухой, в часе езды к северу. На его берегу маршрут заканчивается.',link:['ЮНЕСКО: петроглифы Онежского озера и Белого моря','https://whc.unesco.org/ru/list/1654']},
- {name:'Кемь',lat:64.955,lon:34.600,m:'wood',date:'Успенский собор, 1711–1717 годы',photo:'',
-  text:'Старинный поморский город в устье реки Кемь. Трёхшатровый деревянный Успенский собор поставили в годы Северной войны в память о победах над шведами. Из соседнего Рабочеостровска уходят катера на Соловки.',
-  facts:['Собор — один из немногих сохранившихся трёхшатровых храмов','Кемь веками была вотчиной Соловецкого монастыря','В 1920–1930-е здесь был пересыльный пункт Соловецкого лагеря','В Рабочеостровске снимали фильм «Остров» (2006)'],
-  why:'Ворота Соловков и памятник поморской культуры. В одной точке сходятся три темы маршрута: деревянный храм, каменистый берег и море как дорога.',
-  next:'Маршрут пройден: от ладожского монастыря до беломорского берега около тысячи километров по дорогам. Дальше только море.',link:['Портал «Культура.РФ»','https://www.culture.ru/']}
+  {
+    "name": "Валаам",
+    "lat": 61.389,
+    "lon": 30.945,
+    "m": "water",
+    "date": "монастырь известен с XIV–XV веков",
+    "photo": "",
+    "text": "Архипелаг из полусотни гранитных островов в северной части Ладоги. На главном острове стоит Спасо-Преображенский монастырь; время его основания историки относят к концу XIV века, монастырское предание называет более раннее.",
+    "facts": [
+      "Нынешний Спасо-Преображенский собор построен в 1887–1896 годах",
+      "В 1940 году братия ушла в Финляндию и основала там Новый Валаам",
+      "Монашеская жизнь возобновлена в 1989 году",
+      "На островах писали этюды Шишкин, Куинджи и Рерих"
+    ],
+    "why": "Островной монастырь жил не только богослужением. Сады, причалы и хозяйственные постройки помогали обеспечивать людей вдали от материка. Устройство этого хозяйства — отдельная часть истории Валаама.",
+    "next": "Следующая остановка — Сортавала на материковом берегу Ладоги. В рассказе переходим от островного хозяйства к городским улицам; водную поездку нужно планировать по действующему расписанию.",
+    "link": [
+      "Сайт монастыря",
+      "https://valaam.ru/"
+    ],
+    "observe": "На снимках найдите бухту и постройки у воды. Что о расположении монастыря видно с берега, а что можно узнать только из описания?",
+    "takeaway": "Сад зависит от почвы, климата и работы людей.",
+    "note": {
+      "title": "Садоводы с материка",
+      "text": "В интервью 2005 года профессор Капитолина Кондрашова вспоминала, как специалисты из Мичуринска начали приезжать сюда в 1985-м. Сначала расчищали сады и обрезали деревья, потом выращивали посадочный материал на самом острове: привезённые саженцы часто не выдерживали местного климата. За видом монастырского сада стоит работа агрономов и студентов.",
+      "label": "Валаамский монастырь: беседа с К. В. Кондрашовой, 2005",
+      "url": "https://www.valaam.ru/publishing/interview/byt-sadam-na-valaame/"
+    }
+  },
+  {
+    "name": "Сортавала",
+    "lat": 61.703,
+    "lon": 30.692,
+    "m": "stone",
+    "date": "основана в 1632 году",
+    "photo": "",
+    "text": "Сортавала стоит у северного берега Ладоги. В центре сохранились здания времени, когда город входил в состав Финляндии. Лучше всего знакомиться с ними по отдельным адресам: банк, жилой дом, общественное здание. У каждого было своё назначение.",
+    "facts": [
+      "Имеет статус исторического поселения",
+      "Здесь работали архитекторы Уно Ульберг и Элиэль Сааринен",
+      "В 1916–1918 годах в городе жил Николай Рерих",
+      "Отсюда уходят суда на Валаам и ретропоезд в Рускеалу"
+    ],
+    "why": "Городская застройка позволяет увидеть пограничную историю Карелии в деталях: именах архитекторов, планировке помещений, обработке гранита. Облик улицы складывался постепенно, под разные нужды жителей.",
+    "next": "В Рускеале проследим путь камня в обратную сторону — от готового здания к месту добычи.",
+    "link": [
+      "Портал «Культура.РФ»",
+      "https://www.culture.ru/"
+    ],
+    "observe": "Сравните два фасада в галерее. Посмотрите на цоколь, окна и углы: одинаково ли обработан камень?",
+    "takeaway": "У старого фасада есть история повседневного использования.",
+    "note": {
+      "title": "Банк внизу, квартиры наверху",
+      "text": "В доме Леандера на углу Карельской улицы и улицы Гагарина банковские конторы занимали первый этаж, а руководство жило на втором. Здание возвели в 1905 году по проекту бюро Гезеллиуса, Линдгрена и Сааринена. Такая подробность помогает читать фасад: за ним были и рабочие помещения, и обычное жильё.",
+      "label": "Центр охраны культурного наследия Карелии: дом Леандера",
+      "url": "https://monuments.karelia.ru/napravlenija-dejatel-nosti/populjarizacija/est-takoj-pamjatnik/zdanie-s-kontoroj-banka-kirpichnoe-g-sortavala-ul-karel-skaja-13-1-ul-gagarina/"
+    }
+  },
+  {
+    "name": "Рускеала",
+    "lat": 61.946,
+    "lon": 30.581,
+    "m": "stone",
+    "date": "исторические мраморные разработки с XVIII века",
+    "photo": "",
+    "text": "Затопленный мраморный карьер с бирюзовой водой и отвесными серо-белыми стенами. Добычу начали при Екатерине II, когда Петербургу понадобился облицовочный камень. С 2005 года здесь горный парк.",
+    "facts": [
+      "Главный карьер: 460 м в длину, до 100 м в ширину",
+      "Рускеальским мрамором облицован Исаакиевский собор",
+      "Камень использован в Мраморном дворце и Михайловском замке",
+      "С 2019 года сюда из Сортавалы ходит ретропоезд на паровой тяге"
+    ],
+    "why": "Рускеальский мрамор связывает историю местного труда со строительством Петербурга. У карьера были разные периоды работы; нынешний горный парк рассказывает лишь о части его прошлого.",
+    "next": "После каменоломни отправимся к деревянным домам Кинермы. Там важны не размеры выработки, а устройство деревенского двора.",
+    "link": [
+      "Горный парк «Рускеала»",
+      "https://ruskeala.ru/"
+    ],
+    "observe": "Найдите на снимке границу воды и стену выработки. Какие следы показывают, что перед вами карьер?",
+    "takeaway": "Один и тот же камень становился облицовкой и известью.",
+    "note": {
+      "title": "Мрамор шёл и в печь",
+      "text": "В Рускеале добывали камень не только для облицовки. Из него получали известь. «Геологический вестник» описывает девять обжиговых печей: первые три запустили в 1895 году, ещё шесть — в 1937-м. Поэтому история карьера включает и дворцовые фасады, и производство строительного материала.",
+      "label": "Геологический вестник, № 5, 19 февраля 2013, с. 4 (PDF)",
+      "url": "https://rosnedra.gov.ru/data/Files/File/2397.pdf#page=4"
+    }
+  },
+  {
+    "name": "Кинерма",
+    "lat": 61.527,
+    "lon": 32.829,
+    "m": "wood",
+    "date": "упоминается с 1563 года",
+    "photo": "",
+    "text": "Деревня карел-ливвиков в Пряжинском районе. Полтора десятка домов стоят кругом около еловой рощи с часовней. Планировка и большинство построек сохранились с XIX века.",
+    "facts": [
+      "Деревня находится в Пряжинском районе",
+      "В центре сохранилась роща с часовней",
+      "Дома объединяют жилые и хозяйственные помещения",
+      "В историческом описании отмечена баня Кузнецовой 1902 года"
+    ],
+    "why": "В Кинерме можно изучать застройку карелов-ливвиков на месте. Ценность имеют и сами дома, и расстояния между ними, и их положение относительно часовни. Эти связи теряются, если смотреть на каждую постройку отдельно.",
+    "next": "В Петрозаводске устройство поселения определял завод. Сравним его историю с деревней, где дома собирались вокруг часовни и рощи.",
+    "link": [
+      "Портал «Культура.РФ»",
+      "https://www.culture.ru/"
+    ],
+    "observe": "Рассмотрите длину дома и положение окон. Где могла находиться жилая часть, а где хозяйственная? Проверьте предположение по описанию деревни.",
+    "takeaway": "Планировка деревни тоже часть её наследия.",
+    "note": {
+      "title": "Дом «брусом»",
+      "text": "В описании Кинермы встречается слово «брус»: так называют дом-комплекс, у которого жилая и хозяйственная части одной ширины вытянуты в ряд. Ещё одна деталь — фасады домов в старом центре обращены к площади с рощей и часовней. Деревню стоит рассматривать целиком, а не как собрание отдельных изб.",
+      "label": "Центр охраны культурного наследия Карелии: историческая деревня Кинерма",
+      "url": "https://monuments.karelia.ru/napravlenija-dejatel-nosti/populjarizacija/stat-i-ob-ob-ektah-kul-turnogo-nasledija/prjazhinskij-rajon/istoricheskaja-derevnja-kinerma/"
+    }
+  },
+  {
+    "name": "Петрозаводск",
+    "lat": 61.787,
+    "lon": 34.364,
+    "m": "stone",
+    "date": "основан в 1703 году",
+    "photo": "",
+    "text": "Столица республики на берегу Онежского озера. Город начался с Петровского пушечного завода, заложенного в устье Лососинки в год основания Петербурга: рядом была руда, лес на уголь и вода для заводских колёс.",
+    "facts": [
+      "Пушки и ядра завода шли на Северную войну",
+      "С 1784 года центр Олонецкой губернии",
+      "Круглая площадь сохранила ансамбль 1770-х годов",
+      "В 2015 году присвоено звание «Город воинской славы»"
+    ],
+    "why": "Петрозаводск вырос при производстве оружия. Его история помогает понять, как местные ресурсы включались в государственные задачи и как рядом с заводом появлялись городские службы, жильё и дороги.",
+    "next": "От Петрозаводска рассказ уходит на остров Кижи. Для реальной поездки на остров нужен отдельный водный участок с возвращением на материк.",
+    "link": [
+      "Национальный музей Республики Карелия",
+      "https://nmrk.karelia.ru/"
+    ],
+    "observe": "Сопоставьте заводское прошлое города с его положением у озера и реки. Для чего производству были нужны руда, лес и вода?",
+    "takeaway": "Заводские перевозки появились задолго до привычного нам пассажирского поезда.",
+    "note": {
+      "title": "Рельсы внутри завода",
+      "text": "В 1788 году на Александровском заводе устроили рельсовую дорогу длиной 160 метров. Эту цифру приводит Национальный атлас России. Речь о заводском пути для перемещения грузов: пассажирскую железную дорогу представлять здесь не нужно.",
+      "label": "Национальный атлас России, том 4: Петрозаводск",
+      "url": "https://nationalatlas.ru/tom4/276.html"
+    }
+  },
+  {
+    "name": "Кижи",
+    "lat": 62.067,
+    "lon": 35.224,
+    "m": "wood",
+    "date": "Преображенская церковь, 1714 год",
+    "photo": "",
+    "text": "Остров в Онежском озере с ансамблем Кижского погоста: летняя Преображенская церковь, зимняя Покровская и колокольня. Вокруг разместился музей под открытым небом, куда свезли дома, часовни и мельницы со всего Заонежья.",
+    "facts": [
+      "Преображенская церковь построена в 1714 году и имеет 22 главы",
+      "Главы покрыты деревянным лемехом",
+      "В ансамбль входят две церкви и колокольня",
+      "Кижский погост внесён в список Всемирного наследия в 1990 году"
+    ],
+    "why": "Кижский погост включён в список ЮНЕСКО как выдающийся ансамбль деревянной архитектуры. Рядом с историей строительства здесь обязательно нужно читать историю ухода за зданием: без ремонтов храм не дошёл бы до нас.",
+    "next": "После возвращения на материк маршрут продолжается в Кондопоге. Там поговорим о деревянном храме, который известен нам в том числе по фотографиям до пожара.",
+    "link": [
+      "Музей-заповедник «Кижи»",
+      "https://kizhi.karelia.ru/"
+    ],
+    "observe": "Сравните общий вид храма и крупный снимок глав. Лемех — небольшие деревянные пластины покрытия. Чем такой снимок полезнее общего плана?",
+    "takeaway": "Облик памятника менялся при ремонтах.",
+    "note": {
+      "title": "Когда главы были железными",
+      "text": "Нынешний вид церкви легко принять за неизменный с XVIII века. Но музейная история ремонтов сообщает другое: в 1818 году сруб обшили досками, а с 1822-го главы начали покрывать железом. В 1870 году церковь снаружи покрасили. Реставраторам приходилось разбираться, какие переделки сохранять, а какие снимать.",
+      "label": "Музей-заповедник «Кижи»: «Из истории ремонтов и реставраций», 2005",
+      "url": "https://site.kizhi.karelia.ru/library/metamorphosis/1175.html"
+    }
+  },
+  {
+    "name": "Кондопога",
+    "lat": 62.206,
+    "lon": 34.268,
+    "m": "wood",
+    "date": "Успенская церковь, 1774 год",
+    "photo": "",
+    "dx": 9,
+    "dy": 2,
+    "text": "Кондопога стоит у залива Онежского озера. Дерево здесь связано с двумя историями: Успенской церковью 1774 года и бумажным производством. Старый храм сгорел в августе 2018-го. В галерее показаны архивные снимки: их нельзя принимать за современный вид здания.",
+    "facts": [
+      "Кондопожская ГЭС (1929) построена по плану ГОЭЛРО",
+      "Целлюлозно-бумажный комбинат выпускает газетную бумагу",
+      "В городе звучат карильоны нидерландской работы",
+      "Дерево здесь и памятник, и промышленное сырьё"
+    ],
+    "why": "Снимки Успенской церкви дают возможность рассмотреть утраченное здание. Его история ставит практический вопрос: что нужно измерять, фотографировать и описывать заранее, пока памятник ещё существует?",
+    "next": "Дальше — Марциальные воды. От промышленного города перейдём к источнику, открытие которого тоже связано с заводским работником.",
+    "link": [
+      "Об Успенской церкви на сайте музея «Кижи»",
+      "https://kizhi.karelia.ru/"
+    ],
+    "observe": "У снимка утраченной церкви обязательно прочитайте подпись. Что фотография сохраняет о здании, а чего по ней нельзя восстановить?",
+    "takeaway": "Архивный снимок не показывает нынешнее состояние места."
+  },
+  {
+    "name": "Марциальные воды",
+    "lat": 62.155,
+    "lon": 33.897,
+    "m": "water",
+    "date": "курорт основан в 1719 году",
+    "photo": "",
+    "dx": -13,
+    "dy": 9,
+    "text": "Первый российский курорт. Железистые источники в 1714 году обнаружил заводской работник Иван Рябоев, а в 1719 году Пётр I указом учредил здесь лечебницу и назвал воды в честь Марса, бога войны и железа.",
+    "facts": [
+      "Курорт учреждён в 1719 году",
+      "Пётр I приезжал сюда в 1719, 1720, 1722 и 1724 годах",
+      "В музейный комплекс входит деревянная церковь апостола Петра",
+      "Сохранились павильоны XIX века над источником и местом добычи руды"
+    ],
+    "why": "Открытие заводского работника заинтересовало врачей и Петра I. У небольшого источника появилось новое назначение, а вместе с ним — постройки для приезжих. Сохранившийся музейный комплекс позволяет проследить эту перемену.",
+    "next": "У Кивача вода появится в другом качестве: как предмет наблюдения для поэта, посетителя и сотрудника заповедника.",
+    "link": [
+      "Национальный музей: филиал «Марциальные воды»",
+      "https://nmrk.karelia.ru/"
+    ],
+    "observe": "В музейном описании найдите павильон над источником и павильон над местом добычи руды. Почему их важно не перепутать?",
+    "takeaway": "История курорта связана с добычей руды.",
+    "note": {
+      "title": "У источника была и рудная история",
+      "text": "В состав музея входят два разных павильона XIX века: один над бывшим источником воды, другой над местом добычи руды. Открытие источника связано с работником Кончезерского завода Иваном Ребоевым. Здесь заводская и курортная история буквально соседствуют.",
+      "label": "Ассамблея петровских музеев России: музей «Марциальные воды»",
+      "url": "https://a-peter.ru/subject/muzej-marcialnie-vodi/"
+    }
+  },
+  {
+    "name": "Водопад Кивач",
+    "lat": 62.268,
+    "lon": 33.98,
+    "m": "water",
+    "date": "заповедник с 1931 года",
+    "photo": "",
+    "dx": -5,
+    "dy": -11,
+    "text": "Равнинный водопад на реке Суне: вода четырьмя уступами падает с высоты 10,7 м. Вокруг находится один из старейших заповедников России с музеем природы и дендрарием, где растёт карельская берёза.",
+    "facts": [
+      "Державин посвятил ему оду «Водопад» (1791–1794)",
+      "В 1930-е часть стока Суны отвели на Кондопожскую ГЭС, водопад стал слабее",
+      "Заповедник занимает около 11 тысяч гектаров",
+      "Здесь ведут научные наблюдения почти сто лет"
+    ],
+    "why": "Водопад известен благодаря пейзажу и оде Державина. У заповедника есть и менее заметная работа: собирать сопоставимые наблюдения о природе. Один визит даёт впечатление, многолетние записи — материал для исследования.",
+    "next": "Продолжим путь к Повенцу. Здесь разговор о воде перейдёт к строительству канала и судьбам его строителей.",
+    "link": [
+      "Заповедник «Кивач»",
+      "https://zapkivach.ru/"
+    ],
+    "observe": "Какие наблюдения у водопада можно повторять из года в год? Предложите один показатель, который удастся записывать одинаковым способом.",
+    "takeaway": "Повторяемые наблюдения позволяют замечать изменения природы.",
+    "note": {
+      "title": "Летопись без князей и войн",
+      "text": "Первую «Летопись природы» заповедника подготовили в 1967 году — за предыдущий, 1966-й. Затем тома стали ежегодными. Наблюдения ведут по общей методике: так изменения можно сравнивать во времени. За короткой прогулкой к водопаду остаётся работа, которую сотрудники продолжают десятилетиями.",
+      "label": "Заповедник «Кивач»: «Летопись природы»",
+      "url": "https://www.zapkivach.ru/services/nauchnaya-deyatelnost/letopis-prirody/"
+    }
+  },
+  {
+    "name": "Повенец, Беломорканал",
+    "lat": 62.848,
+    "lon": 34.826,
+    "m": "water",
+    "date": "канал построен в 1931–1933 годах",
+    "photo": "",
+    "text": "У посёлка Повенец от Онежского озера начинается Беломорско-Балтийский канал. Первые семь шлюзов, «Повенчанская лестница», поднимают суда на водораздел. Канал длиной 227 км с 19 шлюзами построили за 20 месяцев силами заключённых.",
+    "facts": [
+      "Соединил Белое море с Балтикой, сократив путь на тысячи километров",
+      "Строили почти без техники: тачка, кирка, деревянные шлюзы",
+      "Тысячи строителей погибли от голода и непосильного труда",
+      "В декабре 1941 года шлюзы взорвали, чтобы остановить наступление"
+    ],
+    "why": "Канал строили заключённые в условиях принуждения, голода и тяжёлого труда. Тысячи людей погибли. Рассказ о шлюзах и сроках строительства будет неполным без истории лагеря; Никольская церковь в Повенце посвящена памяти погибших.",
+    "next": "Канал выходит к Белому морю у Беломорска. Там, на островах в устье Выга, находятся самые древние памятники маршрута.",
+    "link": [
+      "Музей «Беломорканал» в Медвежьегорске",
+      "https://nmrk.karelia.ru/"
+    ],
+    "observe": "Сравните современный вид канала и историческую фотографию строительства. О чём не рассказывает один только пейзаж?",
+    "takeaway": "Рассказ о канале включает судьбы заключённых, которые его строили."
+  },
+  {
+    "name": "Беломорские петроглифы",
+    "lat": 64.497,
+    "lon": 34.674,
+    "m": "stone",
+    "date": "около 6–7 тысяч лет назад",
+    "photo": "",
+    "text": "В низовьях Выга на скалах сохранились изображения людей, лодок и животных. Они относятся к эпохе неолита. Названия Бесовы Следки, Ерпин Пудас и Залавруга обозначают разные места с рисунками, а не один камень, на котором собрано всё сразу.",
+    "facts": [
+      "Бесовы Следки открыл Александр Линевский в 1926 году",
+      "Залавругу нашёл Владислав Равдоникас в 1936 году",
+      "Среди сцен есть охота на белуху с лодок и одно из древнейших изображений лыжников",
+      "Сцены читаются как связные рассказы"
+    ],
+    "why": "В 2021 году беломорские и онежские петроглифы включили в список ЮНЕСКО. Рисунки позволяют изучать жизнь охотников и рыболовов задолго до письменных описаний края. Значение отдельных фигур исследователи обсуждают, поэтому не каждое толкование можно считать доказанным.",
+    "next": "Последняя остановка — Кемь. От древних изображений лодок перейдём к городу, чья жизнь связана с рекой и Белым морем.",
+    "link": [
+      "ЮНЕСКО: петроглифы Онежского озера и Белого моря",
+      "https://whc.unesco.org/ru/list/1654"
+    ],
+    "observe": "Найдите на снимке человека и следы движения. Отделите то, что видно на скале, от предположений о смысле сцены.",
+    "takeaway": "Наблюдение и толкование рисунка — разные шаги.",
+    "note": {
+      "title": "Сначала описать, потом истолковать",
+      "text": "В описании ЮНЕСКО различаются сюжеты двух групп: на Онего много птиц и геометрических знаков, на Белом море — сцен охоты и плавания. Одну фигуру можно уверенно опознать как лодку, а объяснение обряда останется гипотезой. При чтении наскальных рисунков это различие существенно.",
+      "label": "ЮНЕСКО: петроглифы Онежского озера и Белого моря",
+      "url": "https://whc.unesco.org/en/list/1654/"
+    }
+  },
+  {
+    "name": "Кемь",
+    "lat": 64.955,
+    "lon": 34.6,
+    "m": "wood",
+    "date": "Успенский собор, 1711–1717 годы",
+    "photo": "",
+    "text": "Старинный поморский город в устье реки Кемь. Трёхшатровый деревянный Успенский собор поставили в годы Северной войны в память о победах над шведами. Из соседнего Рабочеостровска уходят катера на Соловки.",
+    "facts": [
+      "Собор — один из немногих сохранившихся трёхшатровых храмов",
+      "Кемь веками была вотчиной Соловецкого монастыря",
+      "В 1920–1930-е здесь был пересыльный пункт Соловецкого лагеря",
+      "В Рабочеостровске снимали фильм «Остров» (2006)"
+    ],
+    "why": "В Кеми встречаются история поморских поселений, деревянное зодчество и память о пересыльном пункте Соловецкого лагеря. Чтобы понять место, понадобятся разные источники: постройка, музейный чертёж и документы о людях.",
+    "next": "Здесь заканчивается маршрут. Вернитесь к заметкам в котомке: какие детали изменили ваше представление о Карелии?",
+    "link": [
+      "Портал «Культура.РФ»",
+      "https://www.culture.ru/"
+    ],
+    "observe": "Откройте описание обмерного листа. Чем измерение здания отличается от фотографии для путеводителя?",
+    "takeaway": "Обмер сохраняет сведения о размерах и устройстве здания.",
+    "note": {
+      "title": "Собор на листе бумаги",
+      "text": "В фондах музея «Кижи» есть репродукции обмерных чертежей Успенского собора. Лист с шаблонами сделан по обмерам архитектора Александра Ополовникова 1950 года; его музейный номер — КП-7012/9. Такой документ сохраняет размеры и форму деталей, которых не передаёт общий снимок.",
+      "label": "Музей-заповедник «Кижи»: предмет КП-7012/9",
+      "url": "https://site.kizhi.karelia.ru/collection/uspenskij-sobor-g-kem/3454"
+    }
+  }
 ];
+
 const map=$('#map'),P=(lat,lon)=>[(lon-29)/9.2*480,(66.8-lat)/6.4*750],poly=a=>a.map(([la,lo])=>P(la,lo).map(v=>v.toFixed(1)).join(',')).join(' ');
 el('rect',{x:0,y:0,width:480,height:750,fill:'var(--surface)'},map);
 el('polygon',{fill:'var(--lake)',points:poly([[66.9,33.3],[66.5,33.6],[66.1,34.2],[65.8,34.7],[65.2,34.8],[64.95,34.75],[64.52,34.85],[64.25,35.6],[63.9,36.5],[63.95,37.2],[64.3,38.3],[66.9,38.3]])},map);
@@ -687,7 +998,7 @@ function show(i){cur=i;const s=STOPS[i],m=MAT[s.m];
   $('#card').style.setProperty('--c',m.c);
   $('#card').innerHTML=`<div class="top"><span class="cn" title="${i+1} кириллическим счётом">${CN[i]}</span><span class="tag">${m.n}</span><span>остановка ${i+1} из ${STOPS.length} · ${s.date}</span></div>
    <h3>${s.name}</h3>${galleryHTML(i)}<p>${s.text}</p><ul>${s.facts.map(f=>`<li>${f}</li>`).join('')}</ul>
-   <div class="why"><b>Почему это важно</b>${s.why}</div><div class="next"><b>${i<STOPS.length-1?'Дальше':'Финиш'}.</b> ${s.next}</div>
+   <div class="why"><b>Почему это важно</b>${s.why}</div>${s.note?`<div class="source-note"><h4>${s.note.title}</h4><p>${s.note.text}</p><small><a href="${s.note.url}" target="_blank" rel="noopener">${s.note.label}</a></small></div>`:""}<details class="field-task"><summary>Присмотритесь</summary><p>${s.observe}</p></details><div class="next"><b>${i<STOPS.length-1?'Дальше':'Финиш'}.</b> ${s.next}</div>
    <div style="font-size:.95rem"><a href="${s.link[1]}" target="_blank" rel="noopener">${s.link[0]}</a></div>
    <div class="cardnav"><button class="btn ghost" id="prevB" ${i===0?'disabled':''}>Назад</button><button class="btn" id="nextB" ${i===STOPS.length-1?'disabled':''}>Следующая остановка</button></div>`;
   $('#prevB').onclick=()=>show(cur-1);$('#nextB').onclick=()=>show(cur+1);
@@ -715,7 +1026,7 @@ const EVENTS=[
  ['1940','stone','Карело-Финская ССР','После советско-финской войны к Карелии присоединяют Приладожье с Сортавалой и Выборгом, а автономию повышают до союзной республики, шестнадцатой в СССР. В 1956 году её вернут в состав РСФСР.'],
  ['1944','water','Освобождение Петрозаводска','С 1941 года большая часть республики была оккупирована, столицу переносили в Беломорск. 28 июня 1944 года десант Онежской флотилии входит в Петрозаводск.'],
  ['1990','wood','Кижи в списке ЮНЕСКО','Кижский погост становится одним из первых российских объектов Всемирного наследия. Через год Карельская АССР получает нынешнее название: Республика Карелия.'],
- ['2021','stone','Петроглифы в списке ЮНЕСКО','«Петроглифы Онежского озера и Белого моря» включены в список Всемирного наследия. Самый древний памятник Карелии получает мировое признание последним.']
+ ['2021','stone','Петроглифы в списке ЮНЕСКО','«Петроглифы Онежского озера и Белого моря» включены в список Всемирного наследия. В одном объекте объединены две группы наскального искусства: у Онежского озера и в низовьях Выга.']
 ];
 let ev=0;function showEv(i){ev=i;const e=EVENTS[i];document.querySelectorAll('.yr').forEach((b,k)=>{b.setAttribute('aria-selected',k===i);b.tabIndex=k===i?0:-1});
   $('#event').style.setProperty('--c',MAT[e[1]].c);
@@ -727,24 +1038,172 @@ showEv(0);
 
 /* ---------- викторина ---------- */
 const QUIZ=[
- ['Сколько глав у Преображенской церкви в Кижах?',['9','17','22','33'],2,'Двадцать две главы в пять ярусов. Девять глав у соседней Покровской церкви.'],
- ['В честь кого названы Марциальные воды?',['Апостола Марка','Марса, бога войны и железа','Месяца марта','Лейб-медика Марциуса'],1,'Вода богата железом, а Пётр I вёл войну: название в честь Марса объединило и то и другое.'],
- ['Какой собор Петербурга облицован рускеальским мрамором?',['Казанский','Исаакиевский','Смольный','Петропавловский'],1,'Серо-белый мрамор из Рускеалы пошёл на стены Исаакиевского собора.'],
- ['Какое озеро Карелии самое большое в Европе?',['Онежское','Ладожское','Топозеро','Сегозеро'],1,'Ладожское, 17,7 тыс. км². Онежское второе, 9,7 тыс. км².'],
- ['Что записал Элиас Лённрот в карельских деревнях?',['Русские былины','Причитания','Руны, ставшие «Калевалой»','Поморские сказки'],2,'Былины в Заонежье записывал Рыбников, причитания Федосовой собрал Барсов, а Лённрот собирал руны.'],
- ['Сколько шлюзов на Беломорско-Балтийском канале?',['7','12','19','27'],2,'Девятнадцать на 227 км. Семь первых образуют «Повенчанскую лестницу».'],
- ['Какая отрасль дала больше половины промышленной отгрузки Карелии в 2022 году?',['Лесопереработка','Добыча полезных ископаемых','Энергетика','Рыбоводство'],1,'Добыча, 51,6 %. Главный вклад вносит железная руда Костомукши.'],
- ['В каком году петроглифы Карелии вошли в список ЮНЕСКО?',['1990','2005','2014','2021'],3,'В 2021 году. В 1990-м в список включили Кижский погост.']
+  [
+    "Сколько глав у Преображенской церкви в Кижах?",
+    [
+      "9",
+      "17",
+      "22",
+      "33"
+    ],
+    2,
+    "У Преображенской церкви 22 главы. Но её внешний вид менялся: в XIX веке главы покрывали железом.",
+    null,
+    "route"
+  ],
+  [
+    "Что помогает узнать в этих фигурах лыжников?",
+    [
+      "Только подпись автора",
+      "Лыжи и следы движения",
+      "Расположение рисунка на севере",
+      "Любая длинная линия означает лыжу"
+    ],
+    1,
+    "Сначала рассматривают детали изображения. Вывод о занятии человека должен опираться на рисунок, а не только на место находки.",
+    "s-belomorsk-1",
+    "route"
+  ],
+  [
+    "Зачем в Рускеале работали обжиговые печи?",
+    [
+      "Сушить древесину",
+      "Плавить железную руду",
+      "Получать известь из мрамора",
+      "Обогревать туристические тропы"
+    ],
+    2,
+    "Из мрамора получали строительную и технологическую известь. Карьер поставлял не только облицовочный камень.",
+    null,
+    "route"
+  ],
+  [
+    "Где сделан этот снимок?",
+    [
+      "На Валааме",
+      "В Рускеале",
+      "В Кеми",
+      "На Киваче"
+    ],
+    1,
+    "Это затопленный мраморный карьер. Прямые стены выработки помогают увидеть его промышленное происхождение.",
+    "s-ruskeala2-3",
+    "route"
+  ],
+  [
+    "Что архитекторы называют домом «брусом»?",
+    [
+      "Любую избу без окон",
+      "Храм с высокой колокольней",
+      "Дом только из одного бревна",
+      "Дом с жилой и хозяйственной частями, вытянутыми в один ряд"
+    ],
+    3,
+    "Такое устройство описано в материалах о Кинерме. Слово относится к планировке дома-комплекса.",
+    null,
+    "route"
+  ],
+  [
+    "Кто исполнял руны, а кто составлял из записей «Калевалу»?",
+    [
+      "Перттунен исполнял, Лённрот составлял",
+      "Лённрот исполнял, Перттунен составлял",
+      "Оба только переводили русский текст",
+      "Оба строили кантеле и не записывали песни"
+    ],
+    0,
+    "Архиппа Перттунен был рунопевцем. Элиас Лённрот собирал записи устных песен и работал над текстом эпоса.",
+    null,
+    "names"
+  ],
+  [
+    "Что помешало Рыбникову продолжить путь и привело к встрече со сказителем?",
+    [
+      "Сломанный паровоз",
+      "Запрет на посещение музея",
+      "Встречный ветер на озере",
+      "Отмена почтового рейса"
+    ],
+    2,
+    "На остановке у Шуйнаволока Рыбников услышал Леонтия Богданова. Об этой поездке рассказывает фольклорист Валентина Кузнецова.",
+    null,
+    "culture"
+  ],
+  [
+    "Что записывают в «Летопись природы» Кивача?",
+    [
+      "Только отзывы посетителей",
+      "Результаты регулярных наблюдений за природой",
+      "Только историю князей",
+      "Расписание экскурсий"
+    ],
+    1,
+    "Первый том подготовили за 1966 год. Общая методика наблюдений позволяет сравнивать разные годы.",
+    null,
+    "route"
+  ],
+  [
+    "Что нужно помнить об этом снимке Успенской церкви?",
+    [
+      "Здание каменное",
+      "Это современный вид Кижей",
+      "Церковь находится в Рускеале",
+      "Снимок сделан до пожара 2018 года"
+    ],
+    3,
+    "Перед нами Успенская церковь в Кондопоге. Архивная фотография показывает утраченное здание, а не нынешнее состояние места.",
+    "s-kondopoga3-3",
+    "route"
+  ],
+  [
+    "Можно ли напрямую сравнить 51,6 % отгрузки и 3,4 % занятых?",
+    [
+      "Да, это доли от одного целого",
+      "Нет: различаются базы расчёта и годы",
+      "Да, это данные об одном предприятии",
+      "Нет, проценты вообще нельзя сравнивать"
+    ],
+    1,
+    "Первая доля относится к промышленной отгрузке 2022 года, вторая — ко всем занятым в экономике в 2024-м. Производительность труда так не рассчитывают.",
+    null,
+    "economy"
+  ],
+  [
+    "Что даёт обмерный чертёж, чего не даёт общий снимок?",
+    [
+      "Запах древесины",
+      "Отзывы жителей",
+      "Размеры и форму деталей",
+      "Расписание посещения"
+    ],
+    2,
+    "В каталоге музея «Кижи» есть лист шаблонов по обмерам собора в Кеми, выполненным А. В. Ополовниковым в 1950 году.",
+    null,
+    "route"
+  ],
+  [
+    "Почему линия на нашей карте не равна готовому пути для автомобиля?",
+    [
+      "Она показывает порядок рассказа, включая острова",
+      "Все дороги Карелии закрыты",
+      "Между точками нет расстояния",
+      "Карта относится только к зиме"
+    ],
+    0,
+    "Валаам и Кижи требуют водных участков и возвращения на материк. Схема помогает читать маршрут; поездку планируют с учётом транспорта и сезона.",
+    null,
+    "route"
+  ]
 ];
-QUIZ.splice(1,0,['Кто выбит на этой скале шесть тысяч лет назад?',['Охотники на лыжах','Воины с копьями','Пляшущие шаманы','Рыбаки с сетями'],0,'Это лыжники из Залавруги под Беломорском, одно из древнейших в мире изображений лыж.','s-belomorsk-1']);QUIZ.splice(4,0,['Где сделан этот снимок?',['В Рускеале','На Киваче','На Валааме','На Воттовааре'],0,'Это затопленный мраморный карьер в Рускеале.','s-ruskeala2-3']);QUIZ.push(['Этот храм сгорел в 2018 году. Какой?',['Успенская церковь в Кондопоге','Преображенская церковь в Кижах','Успенский собор в Кеми','Часовня в Кинерме'],0,'Успенская церковь 1774 года, 42 метра высотой. Снимок сделан до пожара.','s-kondopoga3-3']);let qi=0,score=0;
+let qi=0,score=0;
 function drawQ(){const box=$('#quizBox');
-  if(qi>=QUIZ.length){const v=score>=7?'Знатно. Можно самому водить путников.':score>=4?'Добро. Загляните в главы, где ошиблись.':'Стоит пройти маршрут ещё раз.';
+  if(qi>=QUIZ.length){const v=score/QUIZ.length>=.8?'Вы хорошо запомнили и места, и подробности.':score/QUIZ.length>=.5?'Часть историй уже знакома. К остальным можно вернуться по главам.':'Попробуйте сначала пройти маршрут и рассмотреть фотографии.';
     box.innerHTML=`<div class="eyebrow">Результат</div><h3><span class="num">${score} из ${QUIZ.length}</span></h3><p>${v}</p><div><button class="btn" id="again">Пройти заново</button></div>`;$('#again').onclick=()=>{qi=0;score=0;drawQ()};return}
   const q=QUIZ[qi];
-  box.innerHTML=`<div class="progress"><div style="width:${qi/QUIZ.length*100}%"></div></div><div class="eyebrow">Вопрос ${qi+1} из ${QUIZ.length} · верных ответов: ${score}</div><h3>${q[0]}</h3>${q[4]?`<img class="qimg" src="${pic(q[4])}" alt="Снимок к вопросу">`:''}<div class="opts">${q[1].map((o,k)=>`<button class="opt" data-k="${k}">${o}</button>`).join('')}</div><div class="explain" id="exp" hidden></div><div><button class="btn" id="qnext" hidden>${qi===QUIZ.length-1?'Показать результат':'Следующий вопрос'}</button></div>`;
+  box.innerHTML=`<div class="progress"><div style="width:${qi/QUIZ.length*100}%"></div></div><div class="eyebrow">Вопрос ${qi+1} из ${QUIZ.length} · верных ответов: ${score}</div><h3>${q[0]}</h3>${q[4]?`<figure><img class="qimg" src="${pic(q[4])}" alt="Снимок к вопросу"><figcaption>Фото: ${PH[q[4]].a}, ${PH[q[4]].l}. <a href="${PH[q[4]].u}" target="_blank" rel="noopener">Источник снимка</a></figcaption></figure>`:""}<div class="opts">${q[1].map((o,k)=>`<button class="opt" data-k="${k}">${o}</button>`).join('')}</div><div class="explain" id="exp" hidden></div><div><button class="btn" id="qnext" hidden>${qi===QUIZ.length-1?'Показать результат':'Следующий вопрос'}</button></div>`;
   box.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{const k=+b.dataset.k,ok=k===q[2];if(ok)score++;
     box.querySelectorAll('.opt').forEach((o,j)=>{o.disabled=true;if(j===q[2])o.classList.add('ok');else if(j===k)o.classList.add('bad')});
-    $('#exp').innerHTML=`<b>${ok?'Верно.':'Неверно.'}</b> ${q[3]}`;$('#exp').hidden=false;$('#qnext').hidden=false;$('#qnext').focus()});
+    $('#exp').innerHTML=`<b>${ok?'Верно.':'Неверно.'}</b> ${q[3]} <a href="#${q[5]}">Вернуться к рассказу</a>`;$('#exp').hidden=false;$('#qnext').hidden=false;$('#qnext').focus()});
   $('#qnext').onclick=()=>{qi++;drawQ()}}
 drawQ();
 
@@ -803,9 +1262,9 @@ function tiles(host,items,cls){const ids=items.map(x=>x[0]),tx={};items.forEach(
 
 /* ---- титул: сказитель и снимки в оглавлении ---- */
 (function(){const pool=[];STOPS.forEach((s,i)=>{if(i!==9)s.facts.forEach(f=>pool.push([f,s.name,i]))});let k=Math.floor(Math.random()*pool.length);
-  const t=H('div','teller','<div class="emb2"></div><p></p><button class="btn ghost" id="tellMore">Ещё сказ</button>');t.querySelector('.emb2').appendChild(smallEmb('wood'));
+  const t=H('div','teller','<div class="emb2"></div><p></p><button class="btn ghost" id="tellMore">Ещё подробность</button>');t.querySelector('.emb2').appendChild(smallEmb('wood'));
   $('#tocbox').insertBefore(t,$('#toc'));
-  const draw=()=>{const f=pool[k];t.querySelector('p').innerHTML=`${f[0]}.<small>Сказитель говорит об остановке «<a href="#route" data-stop="${f[2]}">${f[1]}</a>»</small>`};
+  const draw=()=>{const f=pool[k];t.querySelector('p').innerHTML=`${f[0]}.<small>Из рассказа об остановке «<a href="#route" data-stop="${f[2]}">${f[1]}</a>»</small>`};
   t.querySelector('#tellMore').onclick=()=>{k=(k+1+Math.floor(Math.random()*(pool.length-1)))%pool.length;draw()};
   t.addEventListener('click',e=>{const a=e.target.closest('a[data-stop]');if(a)show(+a.dataset.stop)});draw();
   const TI={region:'g-paanajarvi-2',people:'c-veps-1',economy:'e-ore3-2',culture:'c-kantele-2',names:'p-derzhavin-1',route:'06-kizhi-1',time:'h-pg-kem-2',quiz:'s-belomorsk-1',src:'h-kalevala-3'};
@@ -834,7 +1293,7 @@ function tiles(host,items,cls){const ids=items.map(x=>x[0]),tx={};items.forEach(
 /* ---- глава вторая: сто жителей и три слова ---- */
 (function(){const sec=$('#people'),pager=sec.querySelector('.pager');
   const w=H('div','two',`<div><h3 class="sub-h">Если бы в Карелии жило сто человек</h3><div class="chips" id="wafChips" role="group" aria-label="Что показать"></div><div class="waffle" id="waf" role="img"></div><div class="wleg" id="wleg"></div><figcaption id="wafSrc" style="font-size:.86rem;font-style:italic;color:var(--muted);margin-top:10px"></figcaption></div>
-   <div><h3 class="sub-h">Три слова на четырёх языках</h3><p class="sub-p">Камень, дерево и вода звучат у соседних народов почти одинаково: языки родственные, прибалтийско-финские.</p><div class="chips" id="lngChips" role="group" aria-label="Язык"></div><dl class="words" id="words"></dl><p style="font-size:.86rem;font-style:italic;color:var(--muted);margin-top:12px">Написание упрощённое; перед защитой сверьте со словарём.</p></div>`);
+   <div><h3 class="sub-h">Как звучит слово «вода»</h3><p class="sub-p">Вепсский и карельский родственны. Но даже внутри карельского формы различаются: переключите язык или наречие и сравните написание.</p><div class="chips" id="lngChips" role="group" aria-label="Язык"></div><dl class="words" id="words"></dl><p style="font-size:.86rem;font-style:italic;color:var(--muted);margin-top:12px">Источник: <a href="https://dictorpus.krc.karelia.ru/en/dict/lemma/17526">ВепКар, статья vezi</a>, КарНЦ РАН. Показаны словарные варианты; внутри наречий существуют местные различия.</p></div>`);
   w.style.marginTop='10px';sec.insertBefore(w,pager);
   for(let i=0;i<100;i++){const c=H('i');c.style.setProperty('--i',i);$('#waf').appendChild(c)}
   const M=[['Где живут',[['Петрозаводск',45,'var(--red)'],['Другие города и посёлки',35,'var(--wood)'],['Село',20,'var(--water)']],'Оценка на 1 января 2024 года, Карелиястат.'],
@@ -842,8 +1301,8 @@ function tiles(host,items,cls){const ids=items.map(x=>x[0]),tx={};items.forEach(
   function set(m){const cells=[...$('#waf').children];let k=0;$('#wleg').innerHTML='';M[m][1].forEach(([n,v,c])=>{for(let j=0;j<v;j++)cells[k++].style.background=c;$('#wleg').insertAdjacentHTML('beforeend',`<span><i style="background:${c}"></i>${n}<b>${v}</b></span>`)});
     $('#waf').setAttribute('aria-label',M[m][1].map(x=>x[0]+' '+x[1]).join(', '));$('#wafSrc').textContent=M[m][2];document.querySelectorAll('#wafChips .chip').forEach((c,j)=>c.setAttribute('aria-pressed',j===m))}
   M.forEach((x,i)=>{const b=H('button','chip',x[0]);b.onclick=()=>set(i);$('#wafChips').appendChild(b)});set(0);
-  const LG=[['Карельский',['kivi','puu','vesi','Terveh!','Passipo']],['Ливвиковский',['kivi','puu','vezi','Terveh!','Passibo']],['Вепсский',['kivi','pu','vezi','Tervhen!','Spasib']],['Финский',['kivi','puu','vesi','Terve!','Kiitos']]],RU=['камень','дерево','вода','здравствуй','спасибо'];
-  function lang(i){$('#words').innerHTML=RU.map((r,j)=>`<dt>${r}</dt><dd lang="${i===3?'fi':i===2?'vep':'krl'}" style="animation-delay:${j*60}ms">${LG[i][1][j]}</dd>`).join('');document.querySelectorAll('#lngChips .chip').forEach((c,j)=>c.setAttribute('aria-pressed',j===i))}
+  const LG=[['Собственно карельское',['vesi / vezi / veži'],'krl'],['Ливвиковское',['vezi'],'olo'],['Людиковское',['vezi / veži'],'lud'],['Вепсский',['vezi'],'vep']],RU=['вода'];
+  function lang(i){$('#words').innerHTML=RU.map((r,j)=>`<dt>${r}</dt><dd lang="${LG[i][2]}" style="animation-delay:${j*60}ms">${LG[i][1][j]}</dd>`).join('');document.querySelectorAll('#lngChips .chip').forEach((c,j)=>c.setAttribute('aria-pressed',j===i))}
   LG.forEach((x,i)=>{const b=H('button','chip',x[0]);b.onclick=()=>lang(i);$('#lngChips').appendChild(b)});lang(0);
 })();
 
@@ -864,13 +1323,13 @@ function tiles(host,items,cls){const ids=items.map(x=>x[0]),tx={};items.forEach(
   const w=H('div','',`<h3 class="sub-h">Восемь вещей, по которым узнают Карелию</h3><p class="sub-p">Нажмите на любую.</p><div id="cultTiles"></div>`);sec.insertBefore(w,pager);
   tiles($('#cultTiles'),[
    ['c-kantele-2','Кантеле','Щипковый инструмент, родня гуслям. Древнее кантеле долбили из цельного куска дерева и натягивали пять струн. В «Калевале» первое кантеле Вяйнямёйнен делает из челюсти огромной щуки.'],
-   ['c-kalitki-3','Калитки','Открытые пирожки из ржаного пресного теста с пшённой, ячневой или картофельной начинкой. По-карельски sipainiekku. Говорили: «калитка просит восьмёрки», то есть восьми составных частей.'],
+   ['c-kalitki-3','Калитки','Открытые пирожки из ржаного пресного теста с пшённой, ячневой или картофельной начинкой. При сравнении рецептов обращайте внимание на тесто, начинку и форму защипов: у одного блюда бывают местные варианты.'],
    ['h-kalevala-3','«Калевала»','Первое издание 1835 года. Лённрот сложил эпос из рун, записанных в деревнях Беломорской Карелии; день подписания предисловия, 28 февраля, стал праздником.'],
-   ['c-birch-2','Карельская берёза','Разновидность берёзы с узорчатой, «мраморной» древесиной. Растёт медленно, ценится на вес, а не на кубометры. Рубить её в лесу запрещено.'],
+   ['c-birch-2','Карельская берёза','Разновидность берёзы с узорчатой, «мраморной» древесиной. На крупном снимке виден рисунок волокон. Именно древесина, а не белая кора отличает её на этом изображении.'],
    ['c-kizhi-house-2','Северная изба','Дом-комплекс: жильё, сени, хлев и сарай под одной крышей, чтобы зимой не выходить на мороз. Этот стоит в музее на Кижах.'],
-   ['c-chapel-1','Часовни','В деревне без церкви молились в часовне. В Заонежье и Олонецкой Карелии их сотни, и почти у каждой своя роща.'],
+   ['c-chapel-1','Часовни','В деревне без церкви молились в часовне. Часовня могла быть центром поселения вместе с окружающей рощей; такое расположение описано, например, в Кинерме.'],
    ['h-vyg-3','Выговская книга','Старообрядцы Выга держали свои школы и мастерские. Их рукописи с пышными заставками узнают по «поморскому орнаменту».'],
-   ['c-veps-1','Вепсский дом','Шёлтозеро на берегу Онего, центр вепсской земли. В таком купеческом доме работает единственный в России музей вепсской культуры.']],'four');
+   ['c-veps-1','Вепсский дом','Шёлтозеро на берегу Онего, центр вепсской земли. В таком купеческом доме работает Шёлтозерский вепсский этнографический музей.']],'four');
 })();
 
 /* ---- глава пятая: лица ---- */
@@ -882,10 +1341,11 @@ function tiles(host,items,cls){const ids=items.map(x=>x[0]),tx={};items.forEach(
 })();
 
 /* ---- глава шестая: путник на карте, котомка, вёрсты ---- */
-(function(){let seen=new Set();try{seen=new Set(JSON.parse(localStorage.getItem('kdv-seen')||'[]'))}catch(e){}
+(function(){let seen=new Set();try{seen=new Set(JSON.parse(localStorage.getItem('kdv-seen')||'[]').filter(i=>Number.isInteger(i)&&i>=0&&i<STOPS.length))}catch(e){}
   const trav=el('circle',{id:'trav',r:6,cx:STOPS[0].x,cy:STOPS[0].y},map);trav.style.pointerEvents='none';
   const bar=H('div','playbar','<button class="btn" id="playB">▶ Пройти весь маршрут</button><span id="playT" style="font-style:italic;color:var(--muted)"></span>');$('#filters').after(bar);
   const kot=H('div','kotomka');STOPS.forEach((s,i)=>{const v=smallEmb(s.m,true);v.dataset.i=i;kot.appendChild(v)});kot.appendChild(H('span'));$('#stoplist').after(kot);
+  const notebook=H('details','field-task','<summary>Заметки из котомки</summary><ul></ul>');kot.after(notebook);
   const km=(a,b)=>{const R=6371,r=Math.PI/180,dl=(b.lat-a.lat)*r,dn=(b.lon-a.lon)*r,h=Math.sin(dl/2)**2+Math.cos(a.lat*r)*Math.cos(b.lat*r)*Math.sin(dn/2)**2;return Math.round(2*R*Math.asin(Math.sqrt(h)))};
   let total=0;for(let i=1;i<STOPS.length;i++)total+=km(STOPS[i-1],STOPS[i]);
   let raf=0;function move(a,b){cancelAnimationFrame(raf);if(calm||a===b){trav.setAttribute('cx',STOPS[b].x);trav.setAttribute('cy',STOPS[b].y);return}
@@ -894,6 +1354,7 @@ function tiles(host,items,cls){const ids=items.map(x=>x[0]),tx={};items.forEach(
       trav.setAttribute('cx',path[i].x+(path[i+1].x-path[i].x)*q);trav.setAttribute('cy',path[i].y+(path[i+1].y-path[i].y)*q);if(p<1)raf=requestAnimationFrame(f)})(t0)}
   function after(i,prev){map.appendChild(trav);move(prev,i);seen.add(i);try{localStorage.setItem('kdv-seen',JSON.stringify([...seen]))}catch(e){}
     kot.querySelectorAll('svg').forEach(v=>v.classList.toggle('v',seen.has(+v.dataset.i)));kot.querySelector('span').textContent=seen.size===STOPS.length?'Котомка полна: все двенадцать остановок пройдены.':`В котомке ${seen.size} из ${STOPS.length}: узор появляется за каждую открытую остановку.`;
+    notebook.querySelector('ul').innerHTML=[...seen].sort((a,b)=>a-b).map(k=>`<li><b>${STOPS[k].name}.</b> ${STOPS[k].takeaway}</li>`).join('');
     const nx=$('#card .next');if(nx&&i<STOPS.length-1)nx.insertAdjacentHTML('beforeend',`<span class="km">По прямой до следующей остановки ${km(STOPS[i],STOPS[i+1])} км.</span>`);
     else if(nx)nx.insertAdjacentHTML('beforeend',`<span class="km">По прямой от точки к точке весь путь составил ${total} км.</span>`)}
   const _show=show;show=function(i){const prev=cur;_show(i);after(i,prev)};
